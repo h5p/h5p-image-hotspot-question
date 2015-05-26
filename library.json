@@ -1,0 +1,44 @@
+{
+  "title": "Image hotspot question",
+  "description": "Image with a question that is answered by pressing the correct hotspot(s).",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 1,
+  "fullscreen": 1,
+  "author": "Joubel AS",
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 5
+  },
+  "machineName": "H5P.ImageHotspotQuestion",
+  "preloadedCss": [
+    {
+      "path": "image-hotspot-question.css"
+    }
+  ],
+  "preloadedJs": [
+    {
+      "path": "image-hotspot-question.js"
+    }
+  ],
+  "editorDependencies": [
+    {
+      "machineName": "H5PEditor.Wizard",
+      "majorVersion": 1,
+      "minorVersion": 0
+    },
+    {
+      "machineName": "H5PEditor.ImageHotspotQuestion",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.Question",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ]
+}
