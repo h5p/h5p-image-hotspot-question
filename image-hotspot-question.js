@@ -27,7 +27,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     };
 
     // Inheritance
-    Question.call(self, 'ImageHotspotQuestion');
+    Question.call(self, 'image-hotspot-question');
 
     // IDs
     this.contentId = id;
@@ -36,7 +36,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     this.params = $.extend({}, defaults, params);
     this.imageSettings = this.params.imageHotspotQuestion.backgroundImageSettings.backgroundImage;
     this.hotspotSettings = this.params.imageHotspotQuestion.hotspotSettings;
-    this.hotspotChosen = false;
+    this.hotspotFeedback = {
+      hotspotChosen: false
+    };
 
     // Previous state
     this.contentData = contentData;
@@ -55,6 +57,11 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     // Register buttons with button area
     this.createRetryButton();
+
+    // Register resize listener with h5p
+    H5P.on(this, 'resize', function () {
+      self.resize();
+    });
   }
 
   // Inheritance
@@ -62,23 +69,30 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.constructor = ImageHotspotQuestion;
 
   ImageHotspotQuestion.prototype.createContent = function () {
-    var $wrapper = $('<div>', {
+    var self = this;
+
+    this.$wrapper = $('<div>', {
       'class': 'image-hotspot-question'
     });
 
     this.$imageWrapper = $('<div>', {
       'class': 'image-wrapper'
-    }).appendTo($wrapper);
+    }).appendTo(this.$wrapper);
 
-    $('<img>', {
+    this.$img = $('<img>', {
       'class': 'hotspot-image',
       'src': H5P.getPath(this.imageSettings.path, this.contentId)
     }).appendTo(this.$imageWrapper);
 
+    // Resize image once loaded
+    this.$img.load(function () {
+      self.trigger('resize');
+    });
+
     this.attachHotspots();
     this.initImageClickListener();
 
-    return $wrapper;
+    return this.$wrapper;
   };
 
   ImageHotspotQuestion.prototype.initImageClickListener = function () {
@@ -124,8 +138,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
   ImageHotspotQuestion.prototype.createHotspotFeedback = function ($clickedElement, mouseEvent, hotspot) {
     // Do not create new hotspot if one exists
-    // Remove old hotspot feedback
-    if (this.hotspotChosen) {
+    if (this.hotspotFeedback.hotspotChosen) {
       return;
     }
 
@@ -134,43 +147,34 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       feedbackString += ' correct';
     }
 
-    this.$hotspotFeedback = $('<div>', {
+    this.hotspotFeedback.$element = $('<div>', {
       'class': feedbackString
     }).appendTo(this.$imageWrapper);
 
-    // Center hotspot feedback on mouse click
-    var feedbackWidth = this.$hotspotFeedback.width();
-    var feedbackHeight = this.$hotspotFeedback.height();
-    var feedbackPosX = mouseEvent.offsetX - (feedbackWidth / 2);
-    var feedbackPosY = mouseEvent.offsetY - (feedbackHeight / 2);
+    this.hotspotFeedback.hotspotChosen = true;
 
-    if ($clickedElement !== this.$imageWrapper) {
+    // Center hotspot feedback on mouse click
+    var feedbackPosX = mouseEvent.offsetX;
+    var feedbackPosY = mouseEvent.offsetY;
+
+    // Apply clicked element offset if click was not in wrapper
+    if (!$clickedElement.hasClass('image-wrapper')) {
       feedbackPosX += $clickedElement.position().left;
       feedbackPosY += $clickedElement.position().top;
     }
 
-    // Check edge cases
-    if (feedbackPosX < 0) {
-      feedbackPosX = 0;
-    } else if (feedbackPosX + feedbackWidth > this.$imageWrapper.width()) {
-      feedbackPosX = this.$imageWrapper.width() - feedbackWidth;
-    }
+    // Keep position and pixel offsets for resizing
+    this.hotspotFeedback.percentagePosX = feedbackPosX / (this.$imageWrapper.width() / 100);
+    this.hotspotFeedback.percentagePosY = feedbackPosY / (this.$imageWrapper.height() / 100);
+    this.hotspotFeedback.pixelOffsetX = (this.hotspotFeedback.$element.width() / 2);
+    this.hotspotFeedback.pixelOffsetY = (this.hotspotFeedback.$element.height() / 2);
 
-    if (feedbackPosY < 0) {
-      feedbackPosY = 0;
-    } else if (feedbackPosY + feedbackHeight > this.$imageWrapper.height()) {
-      feedbackPosY = this.$imageWrapper.height() - feedbackHeight;
-    }
-
-    this.$hotspotFeedback.css({
-      left: feedbackPosX,
-      top: feedbackPosY
-    });
-    this.hotspotChosen = true;
+    // Position feedback
+    this.resizeHotspotFeedback();
 
     // Style correct answers
     if (hotspot && hotspot.userSettings.correct) {
-      this.$hotspotFeedback.addClass('correct');
+      this.hotspotFeedback.$element.addClass('correct');
       this.finishQuestion();
     } else {
       // Wrong answer, show retry button
@@ -180,8 +184,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     if (hotspot && hotspot.userSettings.feedbackText) {
       // Apply feedback text
       this.setFeedback(hotspot.userSettings.feedbackText);
-    } else if ($clickedElement === this.$imageWrapper) {
-      this.setFeedback(hotspot.noneSelectedFeedback);
+    } else if ($clickedElement.hasClass('image-wrapper')) {
+      this.setFeedback(this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback);
     }
 
 
@@ -190,10 +194,10 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.createRetryButton = function () {
     var self = this;
 
-    self.addButton('retry-button', 'Retry', function () {
+    this.addButton('retry-button', 'Retry', function () {
       // Remove hotspot feedback
-      self.$hotspotFeedback.remove();
-      self.hotspotChosen = false;
+      self.hotspotFeedback.$element.remove();
+      self.hotspotFeedback.hotspotChosen = false;
 
       // Hide retry button
       self.hideButton('retry-button');
@@ -201,6 +205,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       // Clear feedback
       self.setFeedback();
     });
+
+    // Hide retry button initially
+    this.hideButton('retry-button');
   };
 
   /**
@@ -209,6 +216,62 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.finishQuestion = function () {
     // Remove button
     this.hideButton('retry-button');
+  };
+
+  /**
+   * Resize image and wrapper
+   */
+  ImageHotspotQuestion.prototype.resize = function () {
+    this.resizeImage();
+    this.resizeHotspotFeedback();
+  };
+
+  ImageHotspotQuestion.prototype.resizeImage = function () {
+    var self = this;
+    // Resize image to fit new container width.
+    var parentWidth = this.$wrapper.width();
+    this.$img.width(parentWidth);
+
+    // Find required height for new width.
+    var naturalWidth = this.$img.get(0).naturalWidth;
+    var naturalHeight = this.$img.get(0).naturalHeight;
+    var imageRatio = naturalHeight / naturalWidth;
+    var neededHeight = -1;
+    if (parentWidth < naturalWidth) {
+      // Scale image down
+      neededHeight = parentWidth * imageRatio;
+    } else {
+      // Scale image to natural size
+      this.$img.width(naturalWidth);
+      neededHeight = naturalHeight;
+    }
+
+    if (neededHeight !== -1) {
+      this.$img.height(neededHeight);
+
+      // Resize image wrapper to match image.
+      self.$imageWrapper.height(neededHeight);
+    }
+  };
+
+  /**
+   * Re-position hotspot feedback.
+   */
+  ImageHotspotQuestion.prototype.resizeHotspotFeedback = function () {
+    // Return hotspot is not chosen
+    if (!this.hotspotFeedback.hotspotChosen) {
+      return;
+    }
+
+    // Calculate positions
+    var posX = (this.hotspotFeedback.percentagePosX * (this.$imageWrapper.width() / 100)) - this.hotspotFeedback.pixelOffsetX;
+    var posY = (this.hotspotFeedback.percentagePosY * (this.$imageWrapper.height() / 100)) - this.hotspotFeedback.pixelOffsetY;
+
+    // Apply new positions
+    this.hotspotFeedback.$element.css({
+      left: posX,
+      top: posY
+    });
   };
 
   return ImageHotspotQuestion;
