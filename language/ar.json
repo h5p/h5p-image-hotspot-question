@@ -1,122 +1,64 @@
 {
   "semantics": [
     {
-      "label": "تحقق زر الإجابة"
-    },
-    {
-      "label": "زر إعادة المحاولة"
-    },
-    {
-      "label": "تسمية الحل الصحيح النص"
-    },
-    {
+      "label": "Image Hotspot Question Editor",
       "fields": [
         {
-          "label": "الإعدادات",
+          "label": "Background image",
           "fields": [
-            {},
             {
-              "label": "صورة الخلفية",
-              "description": "اختياري. اختر الصورة التي تريد استخدامها كخلفية لنشاط اسحب والقي"
+              "label": "The title of this question",
+              "description": "Used in summaries, statistics etc."
             },
             {
-              "label": "حجم النشاط",
-              "description": "حدد حجم النشاط بالبيكسل في منطقة اللعبة",
-              "default": {},
-              "fields": [
-                {},
-                {}
-              ]
+              "label": "Background image",
+              "description": "Select an image to use as background the image hotspot question."
             }
           ]
         },
         {
-          "label": "النشاط",
-          "description": "ابدأ بوضع مناطق إسقاط العناصر الكلمة او الصورة.بعد ذالك قم بوضع الكلمة او الصروة ثم تحقق من اختيار المناطق المناسبة. اخيرا، تحرر من منطقة اسقاط العناصر الكلمة او الصورة مرة أخرى وتحقق من ان الإجابات صحيحة",
+          "label": "Hotspots",
+          "description": "Choose appropriate figure for your hotspot, configure it, then drag and resize it into place.",
           "fields": [
             {
-              "label": "العناصر",
-              "entity": "العنصر",
-              "field": {
-                "label": "العنصر",
-                "fields": [
-                  {
-                    "description": "اختيار نوع المحتوى الذي تريد إضافته"
-                  },
-                  {},
-                  {},
-                  {},
-                  {},
-                  {
-                    "label": "اختر مكان الاسقاط"
-                  },
-                  {
-                    "label": "شفافية الخلفية"
-                  },
-                  {
-                    "label": "عدد غير محدود من حالات العنصر",
-                    "description": "استنساخ هذا العنصر بحيث يمكن سحبها إلى مناطق متعددة الاسقاط"
-                  }
-                ]
-              }
+              "label": "Task description",
+              "description": "Instructions to the user."
             },
             {
-              "label": "مناطق الاسقاط",
-              "entity": "منطقة الاسقاط",
+              "label": "Hotspot",
+              "entity": "Hotspot",
               "field": {
-                "label": "منطقة الاسقاط",
+                "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "التسمية"
-                  },
-                  {
-                    "label": "مشاهدة التسمية"
-                  },
-                  {},
-                  {},
-                  {},
-                  {},
-                  {
-                    "label": "تحديد العناصر الصحيحة"
-                  },
-                  {
-                    "label": "شفافية الخلفية"
-                  },
-                  {
-                    "label": "تلميح",
+                    "label": "userSettings",
                     "fields": [
                       {
-                        "label": "نص التلميح"
+                        "label": "Correct",
+                        "description": "There can be multiple correct hotspots, however, the user gets feedback immediately after selecting a hotspot."
+                      },
+                      {
+                        "label": "Feedback"
                       }
                     ]
                   },
                   {
-                    "label": "هذه منطقة الإسقاط يمكن أن تحتوي على عنصر واحد فقط. تأكد من وجود واحد فقط الإجابة الصحيحة لهذه المنطقة"
+                    "label": "computedSettings",
+                    "fields": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {}
+                    ]
                   }
                 ]
               }
+            },
+            {
+              "label": "Feedback if the user selects an empty spot:"
             }
           ]
-        }
-      ]
-    },
-    {
-      "label": "شفافية خلفية العناصر",
-      "description": "إذا تم تعيين هذا المجال، فإنه سيتم تجاوز شفافية جميع العناصر قابلة للسحب. هذا الرقم ينبغي أن يكون رقم بين ٠ و ١٠٠، حيث ٠ تعني الشفافية الكاملة و ١٠٠ يعني عدم وجود الشفافية"
-    },
-    {
-      "label": "حساسية الاجابة",
-      "description": "يتأكد من إجابة المستخدم بأن تكون بالضبط نفس الجواب",
-      "fields": [
-        {
-          "label": "تفعيل \"إعادة المحاولة \""
-        },
-        {
-          "label": "إعطاء نقطة واحدة للقيام بهذه المهمة بأكملها",
-          "description": "تعطيل لإعطاء نقطة واحدة لكل عنصر قابل للسحب التي يتم وضعها بشكل صحيح"
-        },
-        {
-          "label": "تتطلب إدخال المستخدم قبل أن يتم عرضه الحل"
         }
       ]
     }

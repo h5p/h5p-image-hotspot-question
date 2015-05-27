@@ -1,121 +1,64 @@
 {
   "semantics": [
     {
-      "label": "Pulsante Controlla risposta"
-    },
-    {
-      "label": "Pulsante Riprova"
-    },
-    {
-      "label": "Testo dell'etichetta Soluzione corretta"
-    },
-    {
+      "label": "Bilde målfelt ",
       "fields": [
         {
-          "label": "Impostazioni",
+          "label": "Background image",
           "fields": [
             {
-              "label": "Immagine di sfondo",
-              "description": "Opzionale. Selezionare un'immagine da utilizzare come sfondo per il vostro compito drag and drop."
+              "label": "The title of this question",
+              "description": "Used in summaries, statistics etc."
             },
             {
-              "label": "Dimensione attivit�",
-              "description": "Specifare quanto larga (in px) l'area di gioco dovrebbe essere.",
-              "default": {},
-              "fields": [
-                {},
-                {}
-              ]
+              "label": "Background image",
+              "description": "Select an image to use as background the image hotspot question."
             }
           ]
         },
         {
-          "label": "Attivit�",
-          "description": "Iniziate mettendo le zone di trascinamento.<br/>Successivamente, posizionate gli elementi trascinabili e mettete la spunta sulle relative aree di rilascio.<br/>Infine, modificate nuovamente la zona di rilascio e mettete la spunta sulle risposte corrette.",
+          "label": "Hotspots",
+          "description": "Choose appropriate figure for your hotspot, configure it, then drag and resize it into place.",
           "fields": [
             {
-              "label": "Elementi",
-              "entity": "elemento",
-              "field": {
-                "label": "Elemento",
-                "fields": [
-                  {
-                    "description": "Scegliere il tipo di contenuto che si desidera aggiungere."
-                  },
-                  {},
-                  {},
-                  {},
-                  {},
-                  {
-                    "label": "Selezionare zona di rilascio"
-                  },
-                  {
-                    "label": "Opacit� Sfondo"
-                  },
-                  {
-                    "label": "Numero infinito di istanze di elementi",
-                    "description": "Clonare questo elemento in modo che possa essere trascinato su pi� zone di trascinamento."
-                  }
-                ]
-              }
+              "label": "Task description",
+              "description": "Instructions to the user."
             },
             {
-              "label": "Zone di rilascio",
-              "entity": "Zona di rilascio",
+              "label": "Hotspot",
+              "entity": "Hotspot",
               "field": {
-                "label": "Zona di rilascio",
+                "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "Etichetta"
-                  },
-                  {
-                    "label": "Mostra etichetta"
-                  },
-                  {},
-                  {},
-                  {},
-                  {},
-                  {
-                    "label": "Selezionare gli elementi corretti"
-                  },
-                  {
-                    "label": "Opacit� Sfondo"
-                  },
-                  {
-                    "label": "Suggerimento",
+                    "label": "userSettings",
                     "fields": [
                       {
-                        "label": "Testo di suggerimento"
+                        "label": "Correct",
+                        "description": "There can be multiple correct hotspots, however, the user gets feedback immediately after selecting a hotspot."
+                      },
+                      {
+                        "label": "Feedback"
                       }
                     ]
                   },
                   {
-                    "label": "Questa zona di rilascio pu� contenere un solo elemento. Assicurarsi che ci sia una sola risposta corretta per questa zona di rilascio."
+                    "label": "computedSettings",
+                    "fields": [
+                      {},
+                      {},
+                      {},
+                      {},
+                      {}
+                    ]
                   }
                 ]
               }
+            },
+            {
+              "label": "Feedback if the user selects an empty spot:"
             }
           ]
-        }
-      ]
-    },
-    {
-      "label": "Opacit� Sfondo per elementi trascinabili",
-      "description": "Se questo campo � impostato sovrasciver� l'opacit� impostata su tutti gli elementi trascinabili. Questo dovrebbe essere un numero compreso tra 0 e 100, dove 0 indica la piena trasparenza e 100 equivale a nessuna trasparenza."
-    },
-    {
-      "label": "Impostazioni esecuzione",
-      "description": "Queste opzioni consentono di controllare l'andamento del compito.",
-      "fields": [
-        {
-          "label": "Abilita \"Riprova\""
-        },
-        {
-          "label": "Assegna un punto per il completamento del compito",
-          "description": "Disabilitare per assegnare un punto per ogni elemento trascinabile che viene inserito correttamente."
-        },
-        {
-          "label": "Richiedere l'immissione dei dati all'utente prima che la soluzione sia visualizzata"
         }
       ]
     }
