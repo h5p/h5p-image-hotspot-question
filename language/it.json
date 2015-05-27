@@ -56,7 +56,8 @@
               }
             },
             {
-              "label": "Feedback if the user selects an empty spot:"
+              "label": "Feedback if the user selects an empty spot:",
+              "placeholder": "You didn't locate any hotspots, try again!"
             }
           ]
         }

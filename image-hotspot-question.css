@@ -1,5 +1,7 @@
+/* Transparent background color is a IE10 hack to get click event*/
 .h5p-image-hotspot-question .image-hotspot {
   position: absolute;
+  background-color: rgba(0,0,0,0);
 }
 
 .h5p-image-hotspot-question .image-hotspot.circle {

@@ -56,7 +56,8 @@
               }
             },
             {
-              "label": "Tilbakemelding når brukeren velger ikke treffer noen målfelt:"
+              "label": "Tilbakemelding når brukeren velger ikke treffer noen målfelt:",
+              "placeholder": "Du traff ingen målfelt, prøv igjen!"
             }
           ]
         }
