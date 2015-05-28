@@ -7,6 +7,9 @@
   "runnable": 1,
   "fullscreen": 1,
   "author": "Joubel AS",
+  "embedTypes": [
+    "iframe"
+  ],
   "coreApi": {
     "majorVersion": 1,
     "minorVersion": 5
