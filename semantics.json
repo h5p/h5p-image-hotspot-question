@@ -57,7 +57,7 @@
                       "name": "correct",
                       "type": "boolean",
                       "label": "Correct",
-                      "description": "There can be multiple correct hotspots, however, the user gets feedback immediately after selecting a hotspot."
+                      "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
                     },
                     {
                       "name": "feedbackText",
