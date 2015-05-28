@@ -337,8 +337,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     if (neededHeight !== -1) {
       this.$img.height(neededHeight);
 
-      // Resize image wrapper to match image.
-      self.$imageWrapper.height(neededHeight);
+      // Resize wrapper to match image.
+      self.$wrapper.height(neededHeight);
     }
   };
 
