@@ -63,7 +63,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     // Register task content area
     this.setContent(this.createContent());
 
-    // Register buttons with button area
+    // Register retry button
     this.createRetryButton();
 
     // Register resize listener with h5p
@@ -226,10 +226,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     this.addButton('retry-button', 'Retry', function () {
       self.resetTask();
-    });
-
-    // Hide retry button initially
-    this.hideButton('retry-button');
+    }, false);
   };
 
   /**
