@@ -14,10 +14,6 @@
   overflow: hidden;
 }
 
-.h5p-image-hotspot-question .h5p-enable-fullscreen {
-  display: none;
-}
-
 .h5p-image-hotspot-question .h5peditor .file img {
   max-width: 500px;
 }
@@ -54,6 +50,14 @@
   content: "\f00c";
 }
 
+/* Retry button icon*/
+.h5p-image-hotspot-question .h5p-question-retry-button:before {
+  font-family: "H5PFontAwesome4";
+  content: "\f01e";
+  margin-right: 0.75em;
+}
+
+/* Hotspot feedback animation*/
 .h5p-image-hotspot-question .hotspot-feedback.fade-in{
   animation-name: fade-in;
   -webkit-animation-name: fade-in;
