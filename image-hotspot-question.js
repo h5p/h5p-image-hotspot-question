@@ -1,5 +1,4 @@
-var H5P = H5P || {};
-
+/*global H5P*/
 H5P.ImageHotspotQuestion = (function ($, Question) {
 
   /**
@@ -10,7 +9,6 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    * @param {Object} params Behavior settings
    * @param {number} id Content identification
    * @param {Object} contentData Task specific content data
-   * @returns {H5P.ImageHotspotQuestion} Class instance
    */
   function ImageHotspotQuestion(params, id, contentData) {
     var self = this;
@@ -33,11 +31,22 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     // Inheritance
     Question.call(self, 'image-hotspot-question');
 
-    // IDs
+    /**
+     * Keeps track of content id.
+     * @type {number}
+     */
     this.contentId = id;
 
-    // Contract values
+    /**
+     * Keeps track of current score.
+     * @type {number}
+     */
     this.score = 0;
+
+    /**
+     * Keeps track of max score.
+     * @type {number}
+     */
     this.maxScore = 1;
 
     // Set parameters.
@@ -78,7 +87,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
   /**
    * Create wrapper and main content for question.
-   * @returns {jQuery} Wrapper
+   * @returns {H5P.jQuery} Wrapper
    */
   ImageHotspotQuestion.prototype.createContent = function () {
     var self = this;
@@ -159,7 +168,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
   /**
    * Create a feedback element for a click.
-   * @param {jQuery} $clickedElement The element that was clicked, a hotspot or the image wrapper.
+   * @param {H5P.jQuery} $clickedElement The element that was clicked, a hotspot or the image wrapper.
    * @param {Object} mouseEvent Mouse event containing mouse offsets within clicked element.
    * @param {Object} hotspot Hotspot parameters.
    */
