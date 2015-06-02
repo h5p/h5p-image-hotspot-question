@@ -49,21 +49,57 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
      */
     this.maxScore = 1;
 
-    // Set parameters.
+    /**
+     * Keeps track of parameters
+     */
     this.params = $.extend({}, defaults, params);
+
+    /**
+     * Easier access to image settings.
+     */
     this.imageSettings = this.params.imageHotspotQuestion.backgroundImageSettings.backgroundImage;
+
+    /**
+     * Easier access to hotspot settings.
+     */
     this.hotspotSettings = this.params.imageHotspotQuestion.hotspotSettings;
+
+    /**
+     * Hotspot feedback object. Contains hotspot feedback specific parameters.
+     * @type {Object}
+     */
     this.hotspotFeedback = {
       hotspotChosen: false
     };
+
+    /**
+     * Keeps track of all hotspots in an array.
+     * @type {Array}
+     */
     this.$hotspots = [];
 
-    // Previous state
+    /**
+     * Keeps track of the content data. Specifically the previous state.
+     * @type {Object}
+     */
     this.contentData = contentData;
     if (contentData !== undefined && contentData.previousState !== undefined) {
       this.previousState = contentData.previousState;
     }
 
+    // Register resize listener with h5p
+    this.on('resize', this.resize);
+  }
+
+  // Inheritance
+  ImageHotspotQuestion.prototype = Object.create(Question.prototype);
+  ImageHotspotQuestion.prototype.constructor = ImageHotspotQuestion;
+
+  /**
+   * Registers this question types DOM elements before they are attached.
+   * Called from H5P.Question.
+   */
+  ImageHotspotQuestion.prototype.registerDomElements = function () {
     // Register task introduction text
     if (this.hotspotSettings.taskDescription) {
       this.setIntroduction(this.hotspotSettings.taskDescription);
@@ -74,16 +110,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     // Register retry button
     this.createRetryButton();
-
-    // Register resize listener with h5p
-    H5P.on(this, 'resize', function () {
-      self.resize();
-    });
-  }
-
-  // Inheritance
-  ImageHotspotQuestion.prototype = Object.create(Question.prototype);
-  ImageHotspotQuestion.prototype.constructor = ImageHotspotQuestion;
+  };
 
   /**
    * Create wrapper and main content for question.
@@ -322,6 +349,12 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    */
   ImageHotspotQuestion.prototype.resizeImage = function () {
     var self = this;
+
+    // Check that question has been attached
+    if (!(this.$wrapper && this.$img)) {
+      return;
+    }
+
     // Resize image to fit new container width.
     var parentWidth = this.$wrapper.width();
     this.$img.width(parentWidth);
@@ -352,7 +385,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    * Re-position hotspot feedback.
    */
   ImageHotspotQuestion.prototype.resizeHotspotFeedback = function () {
-    // Return hotspot is not chosen
+    // Check that hotspot is chosen
     if (!this.hotspotFeedback.hotspotChosen) {
       return;
     }
