@@ -251,7 +251,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     // Finally add fade in animation to hotspot feedback
     this.hotspotFeedback.$element.addClass('fade-in');
 
-
+    // Trigger xAPI completed event
+    this.triggerXAPIScored(this.getScore(), this.getMaxScore(), 'completed');
   };
 
   /**
