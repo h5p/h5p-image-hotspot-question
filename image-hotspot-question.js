@@ -119,21 +119,32 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.createContent = function () {
     var self = this;
 
+
     this.$wrapper = $('<div>', {
       'class': 'image-hotspot-question'
+    }).ready(function () {
+      var imageHeight = self.$wrapper.width() * (self.imageSettings.height / self.imageSettings.width);
+      self.$wrapper.css('height', imageHeight + 'px');
     });
 
     this.$imageWrapper = $('<div>', {
       'class': 'image-wrapper'
     }).appendTo(this.$wrapper);
 
+    // Image loader screen
+    var $loader = $('<div>', {
+      'class': 'image-loader'
+    }).appendTo(this.$imageWrapper)
+      .addClass('loading');
+
     this.$img = $('<img>', {
       'class': 'hotspot-image',
       'src': H5P.getPath(this.imageSettings.path, this.contentId)
-    }).appendTo(this.$imageWrapper);
+    });
 
     // Resize image once loaded
     this.$img.load(function () {
+      $loader.replaceWith(self.$img);
       self.trigger('resize');
     });
 
@@ -251,7 +262,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     // Finally add fade in animation to hotspot feedback
     this.hotspotFeedback.$element.addClass('fade-in');
 
-
+    // Trigger xAPI completed event
+    this.triggerXAPIScored(this.getScore(), this.getMaxScore(), 'completed');
   };
 
   /**
