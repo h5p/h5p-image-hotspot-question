@@ -3,7 +3,7 @@
   "description": "Image with a question that is answered by pressing the correct hotspot(s).",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 0,
+  "patchVersion": 1,
   "runnable": 1,
   "author": "Joubel AS",
   "coreApi": {
