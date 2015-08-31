@@ -1,7 +1,7 @@
 H5P Image Hotspot Question
 ==========
 
-Set a question that the user will answer by pressing the correct hotspot(s) in an image.
+Create a question that is answered by pressing the correct hotspot.
 
 ## License
 
