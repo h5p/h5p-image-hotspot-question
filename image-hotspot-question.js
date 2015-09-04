@@ -263,7 +263,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     this.hotspotFeedback.$element.addClass('fade-in');
 
     // Trigger xAPI completed event
-    this.triggerXAPIScored(this.getScore(), this.getMaxScore(), 'completed');
+    this.triggerXAPIScored(this.getScore(), this.getMaxScore(), 'answered');
   };
 
   /**
