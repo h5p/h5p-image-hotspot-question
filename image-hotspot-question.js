@@ -21,6 +21,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
           }
         },
         hotspotSettings: {
+          hotspot: []
         }
       },
       behaviour: {
@@ -52,7 +53,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     /**
      * Keeps track of parameters
      */
-    this.params = $.extend({}, defaults, params);
+    this.params = $.extend(true, {}, defaults, params);
 
     /**
      * Easier access to image settings.
