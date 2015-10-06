@@ -253,12 +253,11 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       }
     }
 
-    if (hotspot && hotspot.userSettings.feedbackText) {
-      // Apply feedback text
-      this.setFeedback(hotspot.userSettings.feedbackText, this.score, this.maxScore);
-    } else if ($clickedElement.hasClass('image-wrapper')) {
-      this.setFeedback(this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback, this.score, this.maxScore);
+    var feedbackText = (hotspot && hotspot.userSettings.feedbackText ? hotspot.userSettings.feedbackText : this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback);
+    if (!feedbackText) {
+      feedbackText = '&nbsp;';
     }
+    this.setFeedback(feedbackText, this.score, this.maxScore);
 
     // Finally add fade in animation to hotspot feedback
     this.hotspotFeedback.$element.addClass('fade-in');
