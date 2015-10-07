@@ -21,6 +21,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
           }
         },
         hotspotSettings: {
+          hotspot: []
         }
       },
       behaviour: {
@@ -52,7 +53,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     /**
      * Keeps track of parameters
      */
-    this.params = $.extend({}, defaults, params);
+    this.params = $.extend(true, {}, defaults, params);
 
     /**
      * Easier access to image settings.
@@ -252,18 +253,17 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       }
     }
 
-    if (hotspot && hotspot.userSettings.feedbackText) {
-      // Apply feedback text
-      this.setFeedback(hotspot.userSettings.feedbackText);
-    } else if ($clickedElement.hasClass('image-wrapper')) {
-      this.setFeedback(this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback);
+    var feedbackText = (hotspot && hotspot.userSettings.feedbackText ? hotspot.userSettings.feedbackText : this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback);
+    if (!feedbackText) {
+      feedbackText = '&nbsp;';
     }
+    this.setFeedback(feedbackText, this.score, this.maxScore);
 
     // Finally add fade in animation to hotspot feedback
     this.hotspotFeedback.$element.addClass('fade-in');
 
     // Trigger xAPI completed event
-    this.triggerXAPIScored(this.getScore(), this.getMaxScore(), 'completed');
+    this.triggerXAPIScored(this.getScore(), this.getMaxScore(), 'answered');
   };
 
   /**

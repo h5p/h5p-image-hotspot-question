@@ -21,7 +21,7 @@
           "description": "Velg figur på målfelt og innstillinger. Velg deretter posisjon og størrelse som ønsket.",
           "fields": [
             {
-              "label": "Oppgave beskrivelse",
+              "label": "Oppgavebeskrivelse",
               "description": "Instruksjoner om hvordan man skal løse oppgaven."
             },
             {
