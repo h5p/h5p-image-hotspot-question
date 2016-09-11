@@ -3,8 +3,8 @@
   "description": "A question that is answered by pressing the correct hotspot.",
   "contentType": "Question",
   "majorVersion": 1,
-  "minorVersion": 2,
-  "patchVersion": 1,
+  "minorVersion": 3,
+  "patchVersion": 0,
   "runnable": 1,
   "author": "Joubel AS",
   "coreApi": {
@@ -31,7 +31,7 @@
     {
       "machineName": "H5PEditor.ImageHotspotQuestion",
       "majorVersion": 1,
-      "minorVersion": 2
+      "minorVersion": 3
     }
   ],
   "preloadedDependencies": [
