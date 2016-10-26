@@ -1,0 +1,61 @@
+{
+  "semantics": [
+    {
+      "label": "Editeur de questions de l'image interactive",
+      "fields": [
+        {
+          "label": "Image d'arrière-plan",
+          "fields": [
+            {
+              "label": "Titre de la question",
+              "default": "Question sur l'image interactive",
+              "description": "Utilisée dans les résumés, statistiques, etc."
+            },
+            {
+              "label": "Image d'arrière-plan",
+              "description": "Choisissez l'image qui servira d'arrière-plan à la question."
+            }
+          ]
+        },
+        {
+          "label": "Zones sensibles",
+          "description": "Sélectionnez la forme de votre choix pour votre zone sensible, redimensionnez-la en l'étirant et placez-la au bon endroit.",
+          "fields": [
+            {
+              "label": "Consigne",
+              "description": "Consigne pour l'utilisateur."
+            },
+            {
+              "label": "Zone sensible",
+              "entity": "Zone sensible",
+              "field": {
+                "label": "Zone sensible",
+                "fields": [
+                  {
+                    "label": "Réglages manuels",
+                    "fields": [
+                      {
+                        "label": "Correct",
+                        "description": "Il peut y avoir plusieurs zones sensibles à trouver. Toutefois, l'utilisateur est averti de la justesse ou non de sa réponse immédiatement après son premier clic."
+                      },
+                      {
+                        "label": "Commentaire de retour"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Réglages calculés automatiquement"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Commentaire si l'utilisateur sélectionne une zone vide :",
+              "placeholder": "Vous n'avez rien trouvé ; refaites un essai !"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
