@@ -4,16 +4,19 @@
     "type": "group",
     "widget": "wizard",
     "label": "Image Hotspot Question Editor",
+    "importance": "high",
     "fields": [
       {
         "name": "backgroundImageSettings",
         "type": "group",
         "label": "Background image",
+        "importance": "high",
         "fields": [
           {
             "name": "questionTitle",
             "type": "text",
             "label": "The title of this question",
+            "importance": "high",
             "default": "Image hotspot question",
             "description": "Used in summaries, statistics etc."
           },
@@ -21,6 +24,7 @@
             "name": "backgroundImage",
             "type": "image",
             "label": "Background image",
+            "importance": "low",
             "description": "Select an image to use as background the image hotspot question."
           }
         ]
@@ -29,6 +33,7 @@
         "name": "hotspotSettings",
         "type": "group",
         "label": "Hotspots",
+        "importance": "high",
         "widget": "imageHotspotQuestion",
         "description": "Choose appropriate figure for your hotspot, configure it, then drag and resize it into place.",
         "fields": [
@@ -36,6 +41,7 @@
             "name": "taskDescription",
             "type": "text",
             "label": "Task description",
+            "importance": "high",
             "description": "Instructions to the user.",
             "optional": true
           },
@@ -43,26 +49,31 @@
             "name": "hotspot",
             "type": "list",
             "label": "Hotspot",
+            "importance": "high",
             "entity": "Hotspot",
             "field": {
               "type": "group",
               "label": "Hotspot",
+              "importance": "high",
               "fields": [
                 {
                   "name": "userSettings",
                   "type": "group",
                   "label": "userSettings",
+                  "importance": "low",
                   "fields": [
                     {
                       "name": "correct",
                       "type": "boolean",
                       "label": "Correct",
+                      "importance": "low",
                       "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
                     },
                     {
                       "name": "feedbackText",
                       "type": "text",
                       "label": "Feedback",
+                      "importance": "low",
                       "optional": true
                     }
                   ]
@@ -71,6 +82,7 @@
                   "name": "computedSettings",
                   "type": "group",
                   "label": "computedSettings",
+                  "importance": "low",
                   "fields": [
                     {
                       "name": "x",
@@ -106,6 +118,7 @@
             "name": "noneSelectedFeedback",
             "type": "text",
             "label": "Feedback if the user selects an empty spot:",
+            "importance": "low",
             "placeholder": "You didn't locate any hotspots, try again!",
             "optional": true
           }
