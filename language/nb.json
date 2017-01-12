@@ -1,13 +1,13 @@
 {
   "semantics": [
     {
-      "label": "Oppgave innstillinger.",
+      "label": "Oppgaveinnstillinger.",
       "fields": [
         {
           "label": "Bakgrunnsbilde",
           "fields": [
             {
-              "label": "Oppgave tittel",
+              "label": "Oppgavetittel",
               "description": "Brukes blant annet i oppsummeringer og statistikk."
             },
             {
@@ -31,7 +31,7 @@
                 "label": "Målfelt",
                 "fields": [
                   {
-                    "label": "Bruker innstillinger",
+                    "label": "Brukerinnstillinger",
                     "fields": [
                       {
                         "label": "Riktig",
