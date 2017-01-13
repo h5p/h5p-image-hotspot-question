@@ -18,7 +18,7 @@
         },
         {
           "label": "Målfelt",
-          "description": "Velg figur på målfelt og innstillinger. Velg deretter posisjon og størrelse som ønsket.",
+          "description": "Dra og slipp en figur for å lage et nytt hotspot. Dobbel-klikk en hotspot for å velge innstillinger. Dra en hotspot for å bevege den. Dra nede til høyre på hotspoten for å endre størrelsen.",
           "fields": [
             {
               "label": "Oppgavebeskrivelse",

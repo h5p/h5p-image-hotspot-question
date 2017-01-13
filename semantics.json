@@ -35,7 +35,7 @@
         "label": "Hotspots",
         "importance": "high",
         "widget": "imageHotspotQuestion",
-        "description": "Choose appropriate figure for your hotspot, configure it, then drag and resize it into place.",
+        "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
         "fields": [
           {
             "name": "taskDescription",
