@@ -24,7 +24,7 @@
             "name": "backgroundImage",
             "type": "image",
             "label": "Background image",
-            "importance": "low",
+            "importance": "high",
             "description": "Select an image to use as background the image hotspot question."
           }
         ]
