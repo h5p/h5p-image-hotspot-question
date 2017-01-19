@@ -1,13 +1,13 @@
 {
   "semantics": [
     {
-      "label": "Oppgave innstillinger.",
+      "label": "Oppgaveinnstillinger.",
       "fields": [
         {
           "label": "Bakgrunnsbilde",
           "fields": [
             {
-              "label": "Oppgave tittel",
+              "label": "Oppgavetittel",
               "description": "Brukes blant annet i oppsummeringer og statistikk."
             },
             {
@@ -18,7 +18,7 @@
         },
         {
           "label": "Målfelt",
-          "description": "Velg figur på målfelt og innstillinger. Velg deretter posisjon og størrelse som ønsket.",
+          "description": "Dra og slipp en figur for å lage et nytt hotspot. Dobbel-klikk en hotspot for å velge innstillinger. Dra en hotspot for å bevege den. Dra nede til høyre på hotspoten for å endre størrelsen.",
           "fields": [
             {
               "label": "Oppgavebeskrivelse",
@@ -31,7 +31,7 @@
                 "label": "Målfelt",
                 "fields": [
                   {
-                    "label": "Bruker innstillinger",
+                    "label": "Brukerinnstillinger",
                     "fields": [
                       {
                         "label": "Riktig",
