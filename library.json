@@ -6,7 +6,8 @@
   "minorVersion": 5,
   "patchVersion": 0,
   "runnable": 1,
-  "author": "Joubel AS",
+  "author": "Joubel",
+  "license": "MIT",
   "coreApi": {
     "majorVersion": 1,
     "minorVersion": 6
