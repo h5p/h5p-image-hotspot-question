@@ -120,7 +120,6 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.createContent = function () {
     var self = this;
 
-
     this.$wrapper = $('<div>', {
       'class': 'image-hotspot-question'
     }).ready(function () {
@@ -257,7 +256,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     if (!feedbackText) {
       feedbackText = '&nbsp;';
     }
-    this.setFeedback(feedbackText, this.score, this.maxScore);
+
+    this.setFeedback(feedbackText, this.score, this.maxScore, '', '', true);
 
     // Finally add fade in animation to hotspot feedback
     this.hotspotFeedback.$element.addClass('fade-in');

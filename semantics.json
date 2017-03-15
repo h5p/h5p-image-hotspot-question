@@ -121,6 +121,14 @@
             "importance": "low",
             "placeholder": "You didn't locate any hotspots, try again!",
             "optional": true
+          },
+          {
+            "name": "showFeedbackAsPopup",
+            "type": "boolean",
+            "label": "Show a feedback on the spot.",
+            "importance": "low",
+            "default": true,
+            "optional": true
           }
         ]
       }
