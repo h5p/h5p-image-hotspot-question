@@ -98,7 +98,6 @@
 .h5p-image-hotspot-question .h5p-question-retry-button:before {
   font-family: "H5PFontAwesome4";
   content: "\f01e";
-  margin-right: 0.75em;
 }
 
 /* Hotspot feedback animation*/
