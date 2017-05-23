@@ -258,7 +258,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     }
 
     var showFeedbackAsPopup = this.params.imageHotspotQuestion.hotspotSettings.showFeedbackAsPopup;
-    this.setFeedback(feedbackText, this.score, this.maxScore, '', '', showFeedbackAsPopup, '', this.hotspotFeedback);
+    this.setFeedback(feedbackText, this.score, this.maxScore, '', '', showFeedbackAsPopup, 'close', this.hotspotFeedback);
 
     // Finally add fade in animation to hotspot feedback
     this.hotspotFeedback.$element.addClass('fade-in');
