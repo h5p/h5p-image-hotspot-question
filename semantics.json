@@ -129,6 +129,27 @@
             "importance": "low",
             "default": true,
             "optional": true
+          },
+          {
+            "label": "Localization",
+            "name": "l10n",
+            "type": "group",
+            "fields": [
+              {
+                "name": "retryText",
+                "label": "Retry button text",
+                "type": "text",
+                "default": "Retry",
+                "optional": true
+              },
+              {
+                "name": "closeText",
+                "label": "Close button text",
+                "type": "text",
+                "default": "Close",
+                "optional": true
+              }
+            ]
           }
         ]
       }
