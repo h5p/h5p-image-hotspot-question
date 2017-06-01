@@ -21,7 +21,12 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
           }
         },
         hotspotSettings: {
-          hotspot: []
+          hotspot: [],
+          showFeedbackAsPopup: true,
+          l10n: {
+            retryText: 'Retry',
+            closeText: 'Close'
+          }
         }
       },
       behaviour: {
