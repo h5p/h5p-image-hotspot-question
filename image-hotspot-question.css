@@ -13,6 +13,19 @@
   position: relative;
   overflow: hidden;
   height: 100%;
+  width: 100%;
+}
+
+/**
+ * This content type is embedded using DIV. there are several examples on themes
+ * setting styles for all images, which affects this content type in a bad way.
+ * Therefore overriding the most common ones here
+ */
+.h5p-image-hotspot-question .image-wrapper .hotspot-image {
+  border: none !important;
+  padding: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
 }
 
 .h5p-image-hotspot-question .h5peditor .file img {
@@ -29,7 +42,7 @@
 .h5p-image-hotspot-question .image-loader:after {
   position: absolute;
   content: "";
-  background: url('http://h5p.org/sites/all/themes/professional_themec/images/h5p.svg') no-repeat center;
+  background: url('h5p.svg') no-repeat center;
   background-size: 50% 50%;
   width: 100%;
   height: 100%;
