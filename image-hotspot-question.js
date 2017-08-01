@@ -357,7 +357,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     this.hideButton('retry-button');
 
     // Clear feedback
-    this.setFeedback();
+    this.removeFeedback();
   };
 
   /**
