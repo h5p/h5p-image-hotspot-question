@@ -21,7 +21,12 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
           }
         },
         hotspotSettings: {
-          hotspot: []
+          hotspot: [],
+          showFeedbackAsPopup: true,
+          l10n: {
+            retryText: 'Retry',
+            closeText: 'Close'
+          }
         }
       },
       behaviour: {
@@ -119,7 +124,6 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    */
   ImageHotspotQuestion.prototype.createContent = function () {
     var self = this;
-
 
     this.$wrapper = $('<div>', {
       'class': 'image-hotspot-question'
@@ -257,7 +261,15 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     if (!feedbackText) {
       feedbackText = '&nbsp;';
     }
-    this.setFeedback(feedbackText, this.score, this.maxScore);
+
+    // Send these settings into setFeedback to turn feedback into a popup.
+    var popupSettings = {
+      showAsPopup: this.params.imageHotspotQuestion.hotspotSettings.showFeedbackAsPopup,
+      closeText: this.params.imageHotspotQuestion.hotspotSettings.l10n.closeText,
+      click: this.hotspotFeedback
+    };
+
+    this.setFeedback(feedbackText, this.score, this.maxScore, '', '', popupSettings);
 
     // Finally add fade in animation to hotspot feedback
     this.hotspotFeedback.$element.addClass('fade-in');
@@ -272,7 +284,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.createRetryButton = function () {
     var self = this;
 
-    this.addButton('retry-button', 'Retry', function () {
+    this.addButton('retry-button', this.params.imageHotspotQuestion.hotspotSettings.l10n.retryText, function () {
       self.resetTask();
     }, false);
   };
@@ -345,7 +357,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     this.hideButton('retry-button');
 
     // Clear feedback
-    this.setFeedback();
+    this.removeFeedback();
   };
 
   /**
