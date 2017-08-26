@@ -7,7 +7,7 @@
           "label":"Immagine di sfondo",
           "fields":[
             {
-              "label":"The title of this question",
+              "label":"Il titolo di questa domanda",
               "default":"Image hotspot question",
               "description":"Used in summaries, statistics etc."
             },
