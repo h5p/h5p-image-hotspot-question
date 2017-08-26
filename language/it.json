@@ -1,10 +1,10 @@
 {
   "semantics":[
     {
-      "label":"Image Hotspot Question Editor",
+      "label":"Editor delle domande di Image Hotspot",
       "fields":[
         {
-          "label":"Background image",
+          "label":"Immagine di sfondo",
           "fields":[
             {
               "label":"The title of this question",
