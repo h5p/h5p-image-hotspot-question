@@ -8,17 +8,17 @@
           "fields":[
             {
               "label":"Il titolo di questa domanda",
-              "default":"Image hotspot question",
-              "description":"Used in summaries, statistics etc."
+              "default":"Domanda dell'Image Hotspot",
+              "description":"Usato in riepiloghi, statistiche ecc."
             },
             {
-              "label":"Background image",
-              "description":"Select an image to use as background the image hotspot question."
+              "label":"Immagine di sfondo",
+              "description":"Seleziona un'immagine da usare come sfondo alla domanda di Image Hotspot."
             }
           ]
         },
         {
-          "label":"Hotspots",
+          "label":"Punti focali (Hotspots)",
           "description":"Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
           "fields":[
             {
