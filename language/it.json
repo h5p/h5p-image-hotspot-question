@@ -19,24 +19,24 @@
         },
         {
           "label":"Punti focali (Hotspots)",
-          "description":"Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "description":"Trascina e rilascia la figura desiderata dalla barra degli strumenti per creare un nuovo punto focale. Fai doppio clic per modificare un punto esistente. Trascina il punto per spostarlo. Tira il gestore del ridimensionamento nell'angolo inferiore destro per ridimensionare.",
           "fields":[
             {
-              "label":"Task description",
-              "description":"Instructions to the user."
+              "label":"Descrizione del compito",
+              "description":"Istruzioni per l'utente."
             },
             {
-              "label":"Hotspot",
-              "entity":"Hotspot",
+              "label":"Punto focale",
+              "entity":"Punto focale",
               "field":{
-                "label":"Hotspot",
+                "label":"Punto focale",
                 "fields":[
                   {
-                    "label":"userSettings",
+                    "label":"impostazioniUtente",
                     "fields":[
                       {
-                        "label":"Correct",
-                        "description":"There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                        "label":"Corretto",
+                        "description":"Ci possono essere più punti focali corretti. Tuttavia, l'utente ottiene un feedback corretto/sbagliato immediatamente dopo il primo clic."
                       },
                       {
                         "label":"Feedback"
@@ -44,7 +44,7 @@
                     ]
                   },
                   {
-                    "label":"computedSettings",
+                    "label":"impostazioniDiCalcolo",
                     "fields":[
                       {
                         
@@ -67,8 +67,8 @@
               }
             },
             {
-              "label":"Feedback if the user selects an empty spot:",
-              "placeholder":"You didn't locate any hotspots, try again!"
+              "label":"Feedback se l'utente seleziona un punto vuoto:",
+              "placeholder":"Non hai colto nessun punto. Riprova!"
             }
           ]
         }
