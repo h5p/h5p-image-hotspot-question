@@ -129,6 +129,7 @@
 .h5p-image-hotspot-question .h5p-question-content {
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 0;
 }
 
 @keyframes fade-in {
