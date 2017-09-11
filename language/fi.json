@@ -1,0 +1,61 @@
+{
+  "semantics": [
+    {
+      "label": "Vuorovaikutteisen kuvatehtävän kysymyseditori",
+      "fields": [
+        {
+          "label": "Taustakuva",
+          "fields": [
+            {
+              "label": "Kysymyksen otsikko",
+              "default": "Vuorovaikutteisen kuvatehtävän kysymys",
+              "description": "Käytetään tiivistelmissä, tilastoissa jne."
+            },
+            {
+              "label": "Taustakuva",
+              "description": "Valitse tehtävälle taustakuva."
+            }
+          ]
+        },
+        {
+          "label": "Zones sensibles",
+          "description": "Sélectionnez la forme de votre choix pour votre zone sensible, redimensionnez-la en l'étirant et placez-la au bon endroit.",
+          "fields": [
+            {
+              "label": "Consigne",
+              "description": "Consigne pour l'utilisateur."
+            },
+            {
+              "label": "Zone sensible",
+              "entity": "Zone sensible",
+              "field": {
+                "label": "Zone sensible",
+                "fields": [
+                  {
+                    "label": "Réglages manuels",
+                    "fields": [
+                      {
+                        "label": "Correct",
+                        "description": "Il peut y avoir plusieurs zones sensibles à trouver. Toutefois, l'utilisateur est averti de la justesse ou non de sa réponse immédiatement après son premier clic."
+                      },
+                      {
+                        "label": "Commentaire de retour"
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Réglages calculés automatiquement"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Commentaire si l'utilisateur sélectionne une zone vide :",
+              "placeholder": "Vous n'avez rien trouvé ; refaites un essai !"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
