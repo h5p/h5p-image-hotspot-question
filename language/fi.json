@@ -1,14 +1,14 @@
 {
   "semantics": [
     {
-      "label": "Vuorovaikutteisen kuvatehtävän kysymyseditori",
+      "label": "Hotspot-tehtävän kysymyseditori",
       "fields": [
         {
           "label": "Taustakuva",
           "fields": [
             {
               "label": "Kysymyksen otsikko",
-              "default": "Vuorovaikutteisen kuvatehtävän kysymys",
+              "default": "Hotspot-tehtävän kysymys",
               "description": "Käytetään tiivistelmissä, tilastoissa jne."
             },
             {
@@ -18,40 +18,40 @@
           ]
         },
         {
-          "label": "Zones sensibles",
-          "description": "Sélectionnez la forme de votre choix pour votre zone sensible, redimensionnez-la en l'étirant et placez-la au bon endroit.",
+          "label": "Hotspot",
+          "description": "Raahaa ja pudota haluttu kuvio työkalupalkista hotspotiksi. Tuplaklikkaa olemassaolevaa hotspotia muokataksesi sitä. Raahaa hotspotia siirtääksesi sitä. Vedä sitä oikeasta alakulmasta muuttaaksesi sen kokoa.",
           "fields": [
             {
-              "label": "Consigne",
-              "description": "Consigne pour l'utilisateur."
+              "label": "Ohje",
+              "description": "Ohje opiskelijalle."
             },
             {
-              "label": "Zone sensible",
-              "entity": "Zone sensible",
+              "label": "Hotspot",
+              "entity": "Hotspot",
               "field": {
-                "label": "Zone sensible",
+                "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "Réglages manuels",
+                    "label": "Asetukset",
                     "fields": [
                       {
-                        "label": "Correct",
-                        "description": "Il peut y avoir plusieurs zones sensibles à trouver. Toutefois, l'utilisateur est averti de la justesse ou non de sa réponse immédiatement après son premier clic."
+                        "label": "Oikein",
+                        "description": "Tehtävässä voi usea hotspot olla oikea valinta. Kuitenkin, käyttäjä saa oikein/väärin -palautteen heti ensimmäisen klikkauksen jälkeen."
                       },
                       {
-                        "label": "Commentaire de retour"
+                        "label": "Palaute"
                       }
                     ]
                   },
                   {
-                    "label": "Réglages calculés automatiquement"
+                    "label": "Lasketut asetukset"
                   }
                 ]
               }
             },
             {
-              "label": "Commentaire si l'utilisateur sélectionne une zone vide :",
-              "placeholder": "Vous n'avez rien trouvé ; refaites un essai !"
+              "label": "Palaute, kun käyttäjä ei löydä hotspotia :",
+              "placeholder": "Et löytänyt mitään ; yritä uudelleen !"
             }
           ]
         }
