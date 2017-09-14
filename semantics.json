@@ -121,6 +121,35 @@
             "importance": "low",
             "placeholder": "You didn't locate any hotspots, try again!",
             "optional": true
+          },
+          {
+            "name": "showFeedbackAsPopup",
+            "type": "boolean",
+            "label": "Show a feedback on the spot.",
+            "importance": "low",
+            "default": true,
+            "optional": true
+          },
+          {
+            "label": "Localization",
+            "name": "l10n",
+            "type": "group",
+            "fields": [
+              {
+                "name": "retryText",
+                "label": "Retry button text",
+                "type": "text",
+                "default": "Retry",
+                "optional": true
+              },
+              {
+                "name": "closeText",
+                "label": "Close button text",
+                "type": "text",
+                "default": "Close",
+                "optional": true
+              }
+            ]
           }
         ]
       }
