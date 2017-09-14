@@ -1,29 +1,29 @@
 {
   "semantics":[
     {
-      "label":"Image Hotspot Question Editor",
+      "label":"Hotspot-tehtävän kysymyseditori",
       "fields":[
         {
-          "label":"Background image",
+          "label":"Taustakuva",
           "fields":[
             {
-              "label":"The title of this question",
-              "default":"Image hotspot question",
-              "description":"Used in summaries, statistics etc."
+              "label":"Tehtävän otsikko",
+              "default":"Otsikko, kysymys tai muu vastaava",
+              "description":"Näkyy yhteenvedoissa ja tilastoissa."
             },
             {
-              "label":"Background image",
-              "description":"Select an image to use as background the image hotspot question."
+              "label":"Taustakuva",
+              "description":"Valitse tehtävälle taustakuva."
             }
           ]
         },
         {
-          "label":"Hotspots",
-          "description":"Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "label":"Hotspotit",
+          "description":"Raahaa ja pudota haluttu kuvio työkalupalkista hotspotiksi. Tuplaklikkaa olemassaolevaa hotspotia muokataksesi sitä. Raahaa hotspotia siirtääksesi sitä. Vedä sitä oikeasta alakulmasta muuttaaksesi sen kokoa.",
           "fields":[
             {
-              "label":"Task description",
-              "description":"Instructions to the user."
+              "label":"Tehtävän ohje",
+              "description":"Ohje tekijälle, tehtävän alustus."
             },
             {
               "label":"Hotspot",
@@ -32,19 +32,19 @@
                 "label":"Hotspot",
                 "fields":[
                   {
-                    "label":"userSettings",
+                    "label":"Asetukset",
                     "fields":[
                       {
-                        "label":"Correct",
-                        "description":"There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                        "label":"Oikea valinta",
+                        "description":"Tehtävässä voi usea hotspot olla oikea valinta. Kuitenkin, käyttäjä saa oikein/väärin -palautteen heti ensimmäisen klikkauksen jälkeen."
                       },
                       {
-                        "label":"Feedback"
+                        "label":"Palaute"
                       }
                     ]
                   },
                   {
-                    "label":"computedSettings",
+                    "label":"Lasketut asetukset",
                     "fields":[
                       {
                         
@@ -67,8 +67,8 @@
               }
             },
             {
-              "label":"Feedback if the user selects an empty spot:",
-              "placeholder":"You didn't locate any hotspots, try again!"
+              "label":"Palaute, kun käyttäjä ei löydä hotspotia:",
+              "placeholder":"Et löytänyt mitään; yritä uudelleen!"
             }
           ]
         }
