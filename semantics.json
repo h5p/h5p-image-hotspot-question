@@ -74,11 +74,7 @@
                       "type": "text",
                       "label": "Feedback",
                       "importance": "low",
-                      "optional": true,
-                      "widget": "html",
-                      "tags": [
-                        "a"
-                      ]
+                      "optional": true
                     }
                   ]
                 },
