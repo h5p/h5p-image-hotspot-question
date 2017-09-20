@@ -44,14 +44,7 @@
                     ]
                   },
                   {
-                    "label": "computedSettings",
-                    "fields": [
-                      {},
-                      {},
-                      {},
-                      {},
-                      {}
-                    ]
+                    "label": "computedSettings"
                   }
                 ]
               }
@@ -59,6 +52,22 @@
             {
               "label": "Feedback if the user selects an empty spot:",
               "placeholder": "You didn't locate any hotspots, try again!"
+            },
+            {
+              "label": "Show a feedback on the spot."
+            },
+            {
+              "label": "Localization",
+              "fields": [
+                {
+                  "label": "Retry button text",
+                  "default": "Retry"
+                },
+                {
+                  "label": "Close button text",
+                  "default": "Close"
+                }
+              ]
             }
           ]
         }
