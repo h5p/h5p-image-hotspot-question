@@ -31,7 +31,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       },
       behaviour: {
         enableRetry: true
-      }
+      },
+      scoreBarLabel: 'You got :num out of :total points'
     };
 
     // Inheritance
@@ -269,7 +270,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       click: this.hotspotFeedback
     };
 
-    this.setFeedback(feedbackText, this.score, this.maxScore, '', '', popupSettings);
+    this.setFeedback(feedbackText, this.score, this.maxScore, this.params.scoreBarLabel, undefined, popupSettings);
 
     // Finally add fade in animation to hotspot feedback
     this.hotspotFeedback.$element.addClass('fade-in');
