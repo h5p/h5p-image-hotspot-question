@@ -1,45 +1,45 @@
 {
   "semantics": [
     {
-      "label": "Image Hotspot Question Editor",
+      "label": "圖像問答任務編輯",
       "fields": [
         {
-          "label": "Background image",
+          "label": "背景圖示",
           "fields": [
             {
-              "label": "The title of this question",
-              "default": "Image hotspot question",
-              "description": "Used in summaries, statistics etc."
+              "label": "問題標題",
+              "default": "圖像問答任務",
+              "description": "將顯示於總結、統計等."
             },
             {
-              "label": "Background image",
-              "description": "Select an image to use as background the image hotspot question."
+              "label": "背景圖示",
+              "description": "請挑選一張照片做為圖像問答任務的背景圖示."
             }
           ]
         },
         {
-          "label": "Hotspots",
-          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "label": "任務連結點",
+          "description": "可藉由工具列功能建立任務連結。亦能對既有任務連結點 ─ 點擊2下滑鼠左鍵進行編輯、單點拖曳移動位置、及拉動右下角變更大小.",
           "fields": [
             {
-              "label": "Task description",
-              "description": "Instructions to the user."
+              "label": "任務描述",
+              "description": "使用者操作指南."
             },
             {
-              "label": "Hotspot",
-              "entity": "Hotspot",
+              "label": "任務連結點",
+              "entity": "任務連結點",
               "field": {
-                "label": "Hotspot",
+                "label": "任務連結點",
                 "fields": [
                   {
-                    "label": "userSettings",
+                    "label": "使用者設定",
                     "fields": [
                       {
-                        "label": "Correct",
-                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                        "label": "正確",
+                        "description": "可以有多個正確的任務連結點。但是，當使用者第一次點擊時將立即取得正確/不正確的回饋資訊."
                       },
                       {
-                        "label": "Feedback"
+                        "label": "回饋"
                       }
                     ]
                   },
@@ -50,22 +50,22 @@
               }
             },
             {
-              "label": "Feedback if the user selects an empty spot:",
-              "placeholder": "You didn't locate any hotspots, try again!"
+              "label": "當使用者點選到空白處回饋:",
+              "placeholder": "您沒有找到任務連結點，請再試一次!"
             },
             {
-              "label": "Show a feedback on the spot."
+              "label": "顯示即時回饋."
             },
             {
-              "label": "Localization",
+              "label": "在地化",
               "fields": [
                 {
-                  "label": "Retry button text",
-                  "default": "Retry"
+                  "label": "重試功能鈕名稱",
+                  "default": "重試"
                 },
                 {
-                  "label": "Close button text",
-                  "default": "Close"
+                  "label": "關閉功能鈕名稱",
+                  "default": "關閉"
                 }
               ]
             }
@@ -74,8 +74,8 @@
       ]
     },
     {
-      "label": "Textual representation of the score bar for those using a readspeaker",
-      "default": "You got :num out of :total points"
+      "label": "閱讀器導讀文字-評分欄",
+      "default": "您得到了:num 分，總分 :total"
     }
   ]
 }
