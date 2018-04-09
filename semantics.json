@@ -13,14 +13,6 @@
         "importance": "high",
         "fields": [
           {
-            "name": "questionTitle",
-            "type": "text",
-            "label": "The title of this question",
-            "importance": "high",
-            "default": "Image hotspot question",
-            "description": "Used in summaries, statistics etc."
-          },
-          {
             "name": "backgroundImage",
             "type": "image",
             "label": "Background image",

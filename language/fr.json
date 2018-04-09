@@ -7,11 +7,6 @@
           "label": "Image d'arrière-plan",
           "fields": [
             {
-              "label": "Titre de la question",
-              "default": "Question sur l'image interactive",
-              "description": "Utilisée dans les résumés, statistiques, etc."
-            },
-            {
               "label": "Image d'arrière-plan",
               "description": "Choisissez l'image qui servira d'arrière-plan à la question."
             }
