@@ -13,8 +13,6 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   function ImageHotspotQuestion(params, id, contentData) {
     var self = this;
 
-    console.log(params);
-
     var defaults = {
       imageHotspotQuestion: {
         backgroundImageSettings: {
