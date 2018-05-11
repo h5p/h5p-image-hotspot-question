@@ -54,7 +54,7 @@
               "placeholder": "Vous n'avez rien trouvé ; refaites un essai !"
             },
             {
-              "label": "Show a feedback on the spot."
+              "label": "Show feedback as a popup"
             },
             {
               "label": "Localization",
