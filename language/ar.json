@@ -4,7 +4,7 @@
       "label": "Image Hotspot Question Editor",
       "fields": [
         {
-          "label": "Background image",
+          "label": "صورة الخلفية",
           "fields": [
             {
               "label": "The title of this question",
