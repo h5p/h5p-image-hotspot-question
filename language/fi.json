@@ -54,7 +54,7 @@
               "placeholder": "Et löytänyt mitään; yritä uudelleen!"
             },
             {
-              "label": "Show a feedback on the spot."
+              "label": "Show feedback as a popup"
             },
             {
               "label": "Localization",

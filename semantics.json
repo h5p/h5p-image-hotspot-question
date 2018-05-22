@@ -125,7 +125,7 @@
           {
             "name": "showFeedbackAsPopup",
             "type": "boolean",
-            "label": "Show a feedback on the spot.",
+            "label": "Show feedback as a popup",
             "importance": "low",
             "default": true,
             "optional": true

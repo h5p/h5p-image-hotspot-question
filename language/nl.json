@@ -54,7 +54,9 @@
               "placeholder": "Je hebt geen hotspot geselecteerd, probeer het opnieuw!"
             },
             {
+
               "label": "Toon feedback op de hotspot."
+              "label": "Toon feedback als een pop-up"
             },
             {
               "label": "Instellingen",
