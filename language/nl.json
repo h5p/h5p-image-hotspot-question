@@ -1,29 +1,29 @@
 {
   "semantics": [
     {
-      "label": "Image Hotspot Question Editor",
+      "label": "Editor van de afbeeldingshotspotvraag",
       "fields": [
         {
-          "label": "Background image",
+          "label": "Achtergrondafbeelding",
           "fields": [
             {
-              "label": "The title of this question",
-              "default": "Image hotspot question",
-              "description": "Used in summaries, statistics etc."
+              "label": "De titel van deze vraag",
+              "default": "Afbeeldingshotspotvraag",
+              "description": "Deze wordt gebruikt in samenvattingen, statistieken, etc."
             },
             {
-              "label": "Background image",
-              "description": "Select an image to use as background the image hotspot question."
+              "label": "Achtergrondafbeelding",
+              "description": "Selecteer een afbeelding die dient als achtergrond voor de hotspotvraag."
             }
           ]
         },
         {
           "label": "Hotspots",
-          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "description": "Plaats en sleep het gewenste figuur vanaf de werkbalk om een nieuwe hotspot te maken. Dubbelklik om een bestaande hotspot te bewerken. Sleep de hotspot om deze te verplaatsen. Trek aan de handgreep in de rechte benedenhoek van het figuur om het formaat te wijzigen.",
           "fields": [
             {
-              "label": "Task description",
-              "description": "Instructions to the user."
+              "label": "Taakomschrijving",
+              "description": "Instructies voor de gebruiker."
             },
             {
               "label": "Hotspot",
@@ -32,11 +32,11 @@
                 "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "userSettings",
+                    "label": "Gebruikersinstellingen",
                     "fields": [
                       {
-                        "label": "Correct",
-                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                        "label": "Juist",
+                        "description": "Er kunnen veel juiste hotspots zijn. Echter, de gebruiker krijgt direct feedback (juist/ onjuist) na de eerste klik."
                       },
                       {
                         "label": "Feedback"
@@ -44,28 +44,30 @@
                     ]
                   },
                   {
-                    "label": "computedSettings"
+                    "label": "Berekende instellingen"
                   }
                 ]
               }
             },
             {
-              "label": "Feedback if the user selects an empty spot:",
-              "placeholder": "You didn't locate any hotspots, try again!"
+              "label": "Feedback als de gebruiker een lege hotspot selecteert:",
+              "placeholder": "Je hebt geen hotspot geselecteerd, probeer het opnieuw!"
             },
             {
-              "label": "Show a feedback on the spot."
+
+              "label": "Toon feedback op de hotspot.", 
+              "label": "Toon feedback als een pop-up"
             },
             {
-              "label": "Localization",
+              "label": "Instellingen",
               "fields": [
                 {
-                  "label": "Retry button text",
-                  "default": "Retry"
+                  "label": "Tekst opnieuw-knop",
+                  "default": "Opnieuw"
                 },
                 {
-                  "label": "Close button text",
-                  "default": "Close"
+                  "label": "Tekst sluit-knop",
+                  "default": "Sluit"
                 }
               ]
             }
@@ -75,7 +77,7 @@
     },
     {
       "label": "Textual representation of the score bar for those using a readspeaker",
-      "default": "You got :num out of :total points"
+      "default": "Je hebt :num van de :total points"
     }
   ]
 }

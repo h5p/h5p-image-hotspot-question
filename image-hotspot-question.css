@@ -132,6 +132,10 @@
   margin-bottom: 0;
 }
 
+.h5p-image-hotspot-question .h5p-question-popup .h5p-question-scorebar {
+  margin: 0;
+}
+
 @keyframes fade-in {
   0% {
     transform: scale(0);
