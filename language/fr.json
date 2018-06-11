@@ -8,7 +8,7 @@
           "fields": [
             {
               "label": "Titre de la question",
-              "default": "Question sur l'image interactive",
+              "default": "Trouvez les zones cliquables",
               "description": "Utilisée dans les résumés, statistiques, etc."
             },
             {
@@ -51,21 +51,21 @@
             },
             {
               "label": "Commentaire si l'utilisateur sélectionne une zone vide :",
-              "placeholder": "Vous n'avez rien trouvé ; refaites un essai !"
+              "placeholder": "Vous n'avez rien trouvé, faîtes un nouvel essai !"
             },
             {
-              "label": "Show feedback as a popup"
+              "label": "Afficher un feedback sur la zone"
             },
             {
-              "label": "Localization",
+              "label": "Localisation",
               "fields": [
                 {
-                  "label": "Retry button text",
-                  "default": "Retry"
+                  "label": "Texte du bouton Réessayez",
+                  "default": "Réessayez"
                 },
                 {
-                  "label": "Close button text",
-                  "default": "Close"
+                  "label": "Texte du bouton Fermer",
+                  "default": "Fermer"
                 }
               ]
             }
@@ -74,8 +74,8 @@
       ]
     },
     {
-      "label": "Textual representation of the score bar for those using a readspeaker",
-      "default": "You got :num out of :total points"
+      "label": "Représentation textuelle du panneau du score pour les utilisateurs de la synthèse vocale",
+      "default": "Vous avez :num points sur un total de :total"
     }
   ]
 }
