@@ -32,14 +32,14 @@
     {
       "machineName": "H5PEditor.ImageHotspotQuestion",
       "majorVersion": 1,
-      "minorVersion": 6
+      "minorVersion": 7
     }
   ],
   "preloadedDependencies": [
     {
       "machineName": "H5P.Question",
       "majorVersion": 1,
-      "minorVersion": 3
+      "minorVersion": 4
     }
   ]
 }
