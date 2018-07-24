@@ -3,7 +3,7 @@ var H5PUpgrades = H5PUpgrades || {};
 H5PUpgrades['H5P.ImageHotspotQuestion'] = (function ($) {
   return {
     1: {
-      7: function (parameters, finished, extras) {
+      8: function (parameters, finished, extras) {
         var extrasOut = extras || {};
 
         // Copy title to new metadata structure if present
