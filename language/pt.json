@@ -74,7 +74,7 @@
       ]
     },
     {
-      "label": "Representação textual da barra de resultados para utilizadores de conversors de texto-para-voz",
+      "label": "Representação textual da barra de resultados para utilizadores de leitor de ecrã",
       "default": "Conseguiu :num pontos de um total de :total"
     }
   ]
