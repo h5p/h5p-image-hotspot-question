@@ -7,11 +7,6 @@
           "label": "Achtergrondafbeelding",
           "fields": [
             {
-              "label": "De titel van deze vraag",
-              "default": "Afbeeldingshotspotvraag",
-              "description": "Deze wordt gebruikt in samenvattingen, statistieken, etc."
-            },
-            {
               "label": "Achtergrondafbeelding",
               "description": "Selecteer een afbeelding die dient als achtergrond voor de hotspotvraag."
             }

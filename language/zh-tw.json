@@ -7,11 +7,6 @@
           "label": "背景圖示",
           "fields": [
             {
-              "label": "問題標題",
-              "default": "圖像問答任務",
-              "description": "將顯示於總結、統計等."
-            },
-            {
               "label": "背景圖示",
               "description": "請挑選一張照片做為圖像問答任務的背景圖示."
             }

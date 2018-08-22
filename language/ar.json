@@ -7,11 +7,6 @@
           "label": "صورة الخلفية",
           "fields": [
             {
-              "label": "عنوان هذا السؤال",
-              "default": "Image hotspot question",
-              "description": "مسخدم في الملخصات والاحصاءات ..الخ."
-            },
-            {
               "label": "صورة الخلفية",
               "description": "حدد صورة لاستخدامها كخلفية للسؤال من نوع (image hotspot)."
             }

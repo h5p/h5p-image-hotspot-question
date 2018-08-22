@@ -7,11 +7,6 @@
           "label": "Hintergrundbild",
           "fields": [
             {
-              "label": "Titel der Frage",
-              "default": "Bilder-Hotspot-Frage",
-              "description": "Wird benutzt in Zusammenfassungen, Statistiken, usw."
-            },
-            {
               "label": "Hintergrundbild",
               "description": "Wähle ein Bild als Hintergrundbild für die Bilder-Hotspot-Frage"
             }

@@ -7,11 +7,6 @@
           "label": "Imagem de fundo",
           "fields": [
             {
-              "label": "Título da questão",
-              "default": "Questão do hotspot de imagem",
-              "description": "Utilizado em sumários, estatísticas, etc..."
-            },
-            {
               "label": "Imagem de fundo",
               "description": "Escolha uma imagem para utilizar como fundo da sua questão de hotspot de imagem."
             }

@@ -63,8 +63,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     /**
      * Easier access to image settings.
+     * H5P semantics doesn't treat Arrays with one element as arrays with one element
      */
-    this.imageSettings = this.params.imageHotspotQuestion.backgroundImageSettings.backgroundImage;
+    this.imageSettings = this.params.imageHotspotQuestion.backgroundImageSettings;
 
     /**
      * Easier access to hotspot settings.

@@ -7,11 +7,6 @@
           "label": "Imagen de fondo",
           "fields": [
             {
-              "label": "El título de esta pregunta",
-              "default": "Image hotspot question",
-              "description": "Utilizado en resúmenes, estadísticas, etc."
-            },
-            {
               "label": "Imagen de fondo",
               "description": "Seleccione una imagen para usar como fondo del del punto de acceso."
             }
