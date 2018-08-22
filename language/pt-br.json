@@ -7,11 +7,6 @@
           "label": "Imagem de fundo",
           "fields": [
             {
-              "label": "O título desta questão",
-              "default": "Questão de ponto de acesso em imagem",
-              "description": "Usado em resumos, estatísticas etc."
-            },
-            {
               "label": "Imagem de fundo",
               "description": "Seleciona uma imagem para ser usada como plano de fundo para a questão de pontos de acesso em imagem."
             }
