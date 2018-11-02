@@ -7,11 +7,6 @@
           "label": "Background image",
           "fields": [
             {
-              "label": "The title of this question",
-              "default": "Image hotspot question",
-              "description": "Used in summaries, statistics etc."
-            },
-            {
               "label": "Background image",
               "description": "Select an image to use as background the image hotspot question."
             }

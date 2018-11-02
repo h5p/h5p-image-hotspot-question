@@ -7,11 +7,6 @@
           "label": "Bakgrunnsbilde",
           "fields": [
             {
-              "label": "Oppgavetittel",
-              "default": "Image hotspot question",
-              "description": "Brukes blant annet i oppsummeringer og statistikk."
-            },
-            {
               "label": "Bakgrunnsbilde",
               "description": "Velg et bilde som bakgrunn til oppgaven."
             }

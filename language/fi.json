@@ -7,11 +7,6 @@
           "label": "Taustakuva",
           "fields": [
             {
-              "label": "Tehtävän otsikko",
-              "default": "Otsikko, kysymys tai muu vastaava",
-              "description": "Näkyy yhteenvedoissa ja tilastoissa."
-            },
-            {
               "label": "Taustakuva",
               "description": "Valitse tehtävälle taustakuva."
             }
