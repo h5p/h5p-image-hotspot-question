@@ -1,24 +1,24 @@
 {
   "semantics": [
     {
-      "label": "Image Hotspot Question Editor",
+      "label": "Editor delle domande di Image Hotspot",
       "fields": [
         {
-          "label": "Background image",
+          "label": "Immagine di sfondo",
           "fields": [
             {
-              "label": "Background image",
-              "description": "Select an image to use as background the image hotspot question."
+              "label": "Immagine di sfondo",
+              "description": "Seleziona un'immagine da usare come sfondo per la domanda di Image Hotspot."
             }
           ]
         },
         {
-          "label": "Hotspots",
-          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "label": "Hotspot",
+          "description": "Trascina e rilascia la figura desiderata dalla barra degli strumenti per creare un nuovo hotspot. Fai doppio clic per modificare un hotspot esistente. Trascina l'hotspot per spostarlo. Tira il punto nell'angolo basso a destra per ridimensionarlo.",
           "fields": [
             {
-              "label": "Task description",
-              "description": "Instructions to the user."
+              "label": "Descrizione del compito",
+              "description": "Istruzioni per l'utente."
             },
             {
               "label": "Hotspot",
@@ -27,11 +27,11 @@
                 "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "userSettings",
+                    "label": "impostazioniUtente",
                     "fields": [
                       {
-                        "label": "Correct",
-                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                        "label": "Giusto",
+                        "description": "Ci possono essere più hotspot corretti. Tuttavia, l'utente prende un feedback di giusto/sbagliato subito dopo il primo clic."
                       },
                       {
                         "label": "Feedback"
@@ -39,28 +39,28 @@
                     ]
                   },
                   {
-                    "label": "computedSettings"
+                    "label": "impostazioniComputate"
                   }
                 ]
               }
             },
             {
-              "label": "Feedback if the user selects an empty spot:",
-              "placeholder": "You didn't locate any hotspots, try again!"
+              "label": "Feedback se l'utente seleziona una zona vuota:",
+              "placeholder": "Non hai individuato nessun hotspot. Riprova!"
             },
             {
-              "label": "Show feedback as a popup"
+              "label": "Mostra il feedback come popup"
             },
             {
-              "label": "Localization",
+              "label": "Localizzazione",
               "fields": [
                 {
-                  "label": "Retry button text",
-                  "default": "Retry"
+                  "label": "Testo del pulsante \"Riprova\",
+                  "default": "Riprova"
                 },
                 {
-                  "label": "Close button text",
-                  "default": "Close"
+                  "label": "Testo del pulsante \"Chiudi\"",
+                  "default": "Chiudi"
                 }
               ]
             }
@@ -69,8 +69,8 @@
       ]
     },
     {
-      "label": "Textual representation of the score bar for those using a readspeaker",
-      "default": "You got :num out of :total points"
+      "label": "Rappresentazione testuale sulla barra del punteggio per chi usa un lettore vocale",
+      "default": "Il tuo punteggio è :num su :total"
     }
   ]
 }
