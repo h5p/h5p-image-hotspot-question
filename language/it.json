@@ -55,7 +55,7 @@
               "label": "Localizzazione",
               "fields": [
                 {
-                  "label": "Testo del pulsante \"Riprova\",
+                  "label": "Testo del pulsante \"Riprova\"",
                   "default": "Riprova"
                 },
                 {
