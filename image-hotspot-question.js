@@ -254,7 +254,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     if (hotspot && hotspot.userSettings.correct) {
       this.hotspotFeedback.$element.addClass('correct');
       this.finishQuestion();
-    } else {
+    }
+    else {
       // Wrong answer, show retry button
       if (this.params.behaviour.enableRetry) {
         this.showButton('retry-button');
@@ -400,7 +401,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     if (parentWidth < naturalWidth) {
       // Scale image down
       neededHeight = parentWidth * imageRatio;
-    } else {
+    }
+    else {
       // Scale image to natural size
       this.$img.width(naturalWidth);
       neededHeight = naturalHeight;
