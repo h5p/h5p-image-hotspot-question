@@ -218,6 +218,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    * @param {Object} hotspot Hotspot parameters.
    */
   ImageHotspotQuestion.prototype.createHotspotFeedback = function ($clickedElement, mouseEvent, hotspot) {
+    const self = this;
+
     // Do not create new hotspot if one exists
     if (this.hotspotFeedback.hotspotChosen) {
       return;
@@ -256,6 +258,11 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       // Wrong answer, show retry button
       if (this.params.behaviour.enableRetry) {
         this.showButton('retry-button');
+        this.hotspotFeedback.$element.click(function (event) {
+          event.stopPropagation();
+          self.resetTask();
+        });
+
       }
     }
 
