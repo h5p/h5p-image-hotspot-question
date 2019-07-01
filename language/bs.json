@@ -1,52 +1,52 @@
 {
   "semantics": [
     {
-      "label": "Oppgaveinnstillinger.",
+      "label": "Image Hotspot Question Editor",
       "fields": [
         {
-          "label": "Bakgrunnsbilde",
+          "label": "Background image",
           "fields": [
             {
-              "label": "Bakgrunnsbilde",
-              "description": "Velg et bilde som bakgrunn til oppgaven."
+              "label": "Background image",
+              "description": "Select an image to use as background the image hotspot question."
             }
           ]
         },
         {
-          "label": "Målfelt",
-          "description": "Dra og slipp en figur for å lage et nytt hotspot. Dobbel-klikk en hotspot for å velge innstillinger. Dra en hotspot for å bevege den. Dra nede til høyre på hotspoten for å endre størrelsen.",
+          "label": "Hotspots",
+          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
           "fields": [
             {
-              "label": "Oppgavebeskrivelse",
-              "description": "Instruksjoner om hvordan man skal løse oppgaven."
+              "label": "Task description",
+              "description": "Instructions to the user."
             },
             {
-              "label": "Målfelt",
-              "entity": "Målfelt",
+              "label": "Hotspot",
+              "entity": "Hotspot",
               "field": {
-                "label": "Målfelt",
+                "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "Brukerinnstillinger",
+                    "label": "userSettings",
                     "fields": [
                       {
-                        "label": "Riktig",
-                        "description": "Det kan være flere riktige målfelt. Brukeren får umiddelbar tilbakemelding ved avgitt svar."
+                        "label": "Correct",
+                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
                       },
                       {
-                        "label": "Tilbakemelding"
+                        "label": "Feedback"
                       }
                     ]
                   },
                   {
-                    "label": "Kalkulerte innstillinger"
+                    "label": "computedSettings"
                   }
                 ]
               }
             },
             {
-              "label": "Tilbakemelding når brukeren velger ikke treffer noen målfelt:",
-              "placeholder": "Du traff ingen målfelt, prøv igjen!"
+              "label": "Feedback if the user selects an empty spot:",
+              "placeholder": "You didn't locate any hotspots, try again!"
             },
             {
               "label": "Show feedback as a popup"

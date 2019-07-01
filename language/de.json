@@ -1,29 +1,24 @@
 {
   "semantics": [
     {
-      "label": "Editor für Bilder-Hotspot-Fragen",
+      "label": "Editor für Hotspot-Bilder-Aufgaben",
       "fields": [
         {
           "label": "Hintergrundbild",
           "fields": [
             {
-              "label": "Titel der Frage",
-              "default": "Bilder-Hotspot-Frage",
-              "description": "Wird benutzt in Zusammenfassungen, Statistiken, usw."
-            },
-            {
               "label": "Hintergrundbild",
-              "description": "Wähle ein Bild als Hintergrundbild für die Bilder-Hotspot-Frage"
+              "description": "Wähle ein Bild als Hintergrundbild für die Hotspot-Bilder-Aufgabe"
             }
           ]
         },
         {
           "label": "Hotspots",
-          "description": "Wähle die passende Form für deinen Hotspot, konfiguriere ihn und dann wähle eine passende Stelle und Größe.",
+          "description": "Ziehe die gewünschte Form aus der Werkzeugleiste, um einen Hotspot zu erstellen. Per Doppelklick kannst du existierende Hotspots bearbeiten. Hotspots können durch Ziehen verschoben werden. Die Größe lässt sich verändern, indem du an den Ecken des Rahmens ziehst.",
           "fields": [
             {
               "label": "Aufgabenbeschreibung",
-              "description": "Anweisungen für den Nutzer."
+              "description": "Anweisungen für den Nutzer"
             },
             {
               "label": "Hotspot",
@@ -35,8 +30,8 @@
                     "label": "Nutzereinstellungen",
                     "fields": [
                       {
-                        "label": "Korrekt!",
-                        "description": "Es kann mehrere richtige Hotspots geben. Der Nutzer bekommt die Rückmeldung über richtig oder falsch dennoch nach dem ersten Klick."
+                        "label": "Korrekt",
+                        "description": "Es kann mehrere richtige Hotspots geben. Der Nutzer bekommt jedoch unmittelbar nach dem ersten Klick die Rückmeldung, ob der Hotspot richtig oder falsch ist."
                       },
                       {
                         "label": "Rückmeldung"
@@ -44,14 +39,7 @@
                     ]
                   },
                   {
-                    "label": "berechnete Einstellungen",
-                    "fields": [
-                      {},
-                      {},
-                      {},
-                      {},
-                      {}
-                    ]
+                    "label": "Berechnete Einstellungen"
                   }
                 ]
               }
@@ -59,10 +47,30 @@
             {
               "label": "Rückmeldung, wenn der Nutzer eine nicht besetzte Stelle anklickt:",
               "placeholder": "Du hast keinen Hotspot getroffen. Versuch es noch einmal!"
+            },
+            {
+              "label": "Rückmeldung als Popup anzeigen"
+            },
+            {
+              "label": "Bezeichnungen und Beschriftungen",
+              "fields": [
+                {
+                  "label": "Beschriftung des \"Wiederholen\"-Buttons",
+                  "default": "Wiederholen"
+                },
+                {
+                  "label": "Beschriftung des \"Schließen\"-Buttons",
+                  "default": "Schließen"
+                }
+              ]
             }
           ]
         }
       ]
+    },
+    {
+      "label": "Text der Punkteleiste für Vorlesewerkzeuge (Barrierefreiheit)",
+      "default": "Du hast :num von :total Punkten erreicht."
     }
   ]
 }

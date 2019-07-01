@@ -7,10 +7,6 @@
           "label": "Bakgrunnsbilde",
           "fields": [
             {
-              "label": "Oppgavetittel",
-              "description": "Brukes blant annet i oppsummeringer og statistikk."
-            },
-            {
               "label": "Bakgrunnsbilde",
               "description": "Velg et bilde som bakgrunn til oppgaven."
             }
@@ -43,14 +39,7 @@
                     ]
                   },
                   {
-                    "label": "Kalkulerte innstillinger",
-                    "fields": [
-                      {},
-                      {},
-                      {},
-                      {},
-                      {}
-                    ]
+                    "label": "Kalkulerte innstillinger"
                   }
                 ]
               }
@@ -58,10 +47,30 @@
             {
               "label": "Tilbakemelding når brukeren velger ikke treffer noen målfelt:",
               "placeholder": "Du traff ingen målfelt, prøv igjen!"
+            },
+            {
+              "label": "Show feedback as a popup"
+            },
+            {
+              "label": "Localization",
+              "fields": [
+                {
+                  "label": "Retry button text",
+                  "default": "Retry"
+                },
+                {
+                  "label": "Close button text",
+                  "default": "Close"
+                }
+              ]
             }
           ]
         }
       ]
+    },
+    {
+      "label": "Textual representation of the score bar for those using a readspeaker",
+      "default": "You got :num out of :total points"
     }
   ]
 }

@@ -13,14 +13,6 @@
         "importance": "high",
         "fields": [
           {
-            "name": "questionTitle",
-            "type": "text",
-            "label": "The title of this question",
-            "importance": "high",
-            "default": "Image hotspot question",
-            "description": "Used in summaries, statistics etc."
-          },
-          {
             "name": "backgroundImage",
             "type": "image",
             "label": "Background image",
@@ -121,9 +113,46 @@
             "importance": "low",
             "placeholder": "You didn't locate any hotspots, try again!",
             "optional": true
+          },
+          {
+            "name": "showFeedbackAsPopup",
+            "type": "boolean",
+            "label": "Show feedback as a popup",
+            "importance": "low",
+            "default": true,
+            "optional": true
+          },
+          {
+            "label": "Localization",
+            "name": "l10n",
+            "type": "group",
+            "fields": [
+              {
+                "name": "retryText",
+                "label": "Retry button text",
+                "type": "text",
+                "default": "Retry",
+                "optional": true
+              },
+              {
+                "name": "closeText",
+                "label": "Close button text",
+                "type": "text",
+                "default": "Close",
+                "optional": true
+              }
+            ]
           }
         ]
       }
     ]
+  },
+  {
+    "name": "scoreBarLabel",
+    "type": "text",
+    "label": "Textual representation of the score bar for those using a readspeaker",
+    "default": "You got :num out of :total points",
+    "importance": "low",
+    "common": true
   }
 ]
