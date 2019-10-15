@@ -10,7 +10,7 @@
   "license": "MIT",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 19
+    "minorVersion": 23
   },
   "machineName": "H5P.ImageHotspotQuestion",
   "preloadedCss": [
