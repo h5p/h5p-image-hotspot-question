@@ -27,11 +27,11 @@
                 "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "impostazioniUtente",
+                    "label": "Impostazioni utente",
                     "fields": [
                       {
-                        "label": "Giusto",
-                        "description": "Ci possono essere più hotspot corretti. Tuttavia, l'utente prende un feedback di giusto/sbagliato subito dopo il primo clic."
+                        "label": "Corretto",
+                        "description": "Ci possono essere più hotspot corretti. Tuttavia, l'utente ottiene un feedback corretto/sbagliato subito dopo il primo clic."
                       },
                       {
                         "label": "Feedback"
@@ -39,7 +39,7 @@
                     ]
                   },
                   {
-                    "label": "impostazioniComputate"
+                    "label": "Impostazioni calcolate"
                   }
                 ]
               }
