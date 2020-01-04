@@ -8,17 +8,17 @@
           "fields": [
             {
               "label": "Immagine di sfondo",
-              "description": "Seleziona un'immagine da usare come sfondo per la domanda di Image Hotspot."
+              "description": "Seleziona un'immagine da usare come sfondo per la domanda di Image Hotspot"
             }
           ]
         },
         {
           "label": "Hotspot",
-          "description": "Trascina e rilascia la figura desiderata dalla barra degli strumenti per creare un nuovo hotspot. Fai doppio clic per modificare un hotspot esistente. Trascina l'hotspot per spostarlo. Tira il punto nell'angolo basso a destra per ridimensionarlo.",
+          "description": "Trascina e rilascia la figura desiderata dalla barra degli strumenti per creare un nuovo hotspot. Fai doppio clic per modificare un hotspot esistente. Trascina l'hotspot per spostarlo. Tira il punto nell'angolo basso a destra per ridimensionarlo",
           "fields": [
             {
               "label": "Descrizione del compito",
-              "description": "Istruzioni per l'utente."
+              "description": "Istruzioni per l'apprendente"
             },
             {
               "label": "Hotspot",
@@ -31,7 +31,7 @@
                     "fields": [
                       {
                         "label": "Corretto",
-                        "description": "Ci possono essere più hotspot corretti. Tuttavia, l'utente ottiene un feedback corretto/sbagliato subito dopo il primo clic."
+                        "description": "Ci possono essere più hotspot corretti. Tuttavia, l'utente ottiene un feedback corretto/sbagliato subito dopo il primo clic"
                       },
                       {
                         "label": "Feedback"
