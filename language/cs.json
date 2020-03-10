@@ -34,7 +34,7 @@
                         "description": "Může existovat více správných aktivních bodů. Uživatel však dostane správnou/nesprávnou zpětnou vazbu ihned po prvním kliknutí."
                       },
                       {
-                        "label": "	Zpětná vazba"
+                        "label": "Zpětná vazba"
                       }
                     ]
                   },
