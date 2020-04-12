@@ -1,14 +1,14 @@
 {
   "semantics": [
     {
-      "label": "Image Hotspot Question Editor",
+      "label": "Editor de Imagen de Pregunta Hotspot",
       "fields": [
         {
           "label": "Imagen de fondo",
           "fields": [
             {
               "label": "Imagen de fondo",
-              "description": "Seleccione una imagen para usar como fondo del del punto de acceso."
+              "description": "Seleccione una imagen para usar como fondo del punto de acceso."
             }
           ]
         },
@@ -39,7 +39,7 @@
                     ]
                   },
                   {
-                    "label": "computedSettings"
+                    "label": "AjustesComputados"
                   }
                 ]
               }
