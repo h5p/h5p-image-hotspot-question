@@ -34,7 +34,7 @@
                         "description": "Puede haber múltiples puntos de acceso correctos. Sin embargo, el usuario recibe comentarios correctos/incorrectos inmediatamente después del primer clic."
                       },
                       {
-                        "label": "Realimentación"
+                        "label": "Retroalimentación"
                       }
                     ]
                   },
