@@ -1,40 +1,40 @@
 {
   "semantics": [
     {
-      "label": "Image Hotspot Question Editor",
+      "label": "Editor otázek aktivních bodů",
       "fields": [
         {
-          "label": "Background image",
+          "label": "Obrázek na pozadí",
           "fields": [
             {
-              "label": "Background image",
-              "description": "Select an image to use as background the image hotspot question."
+              "label": "Obrázek na pozadí",
+              "description": "Vyberte obrázek, který chcete použít jako pozadí otázky aktivních bodů obrázku."
             }
           ]
         },
         {
-          "label": "Hotspots",
-          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "label": "Aktivní body",
+          "description": "Přetažením požadované položky z panelu nástrojů vytvořte nový aktivní bod. Poklepáním upravte existující aktivní bod. Přetažením aktivního bodu jej přesuňte. Chcete-li změnit velikost, zatáhněte za bod změny velikosti v pravém dolním rohu.",
           "fields": [
             {
-              "label": "Task description",
-              "description": "Instructions to the user."
+              "label": "Popis úlohy",
+              "description": "Pokyny pro uživatele."
             },
             {
-              "label": "Hotspot",
-              "entity": "Hotspot",
+              "label": "Aktivní bod",
+              "entity": "Aktivní bod",
               "field": {
-                "label": "Hotspot",
+                "label": "Aktivní bod",
                 "fields": [
                   {
                     "label": "userSettings",
                     "fields": [
                       {
-                        "label": "Correct",
-                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                        "label": "Správně",
+                        "description": "Může existovat více správných aktivních bodů. Uživatel však dostane správnou/nesprávnou zpětnou vazbu ihned po prvním kliknutí."
                       },
                       {
-                        "label": "Feedback"
+                        "label": "Zpětná vazba"
                       }
                     ]
                   },
@@ -45,22 +45,22 @@
               }
             },
             {
-              "label": "Feedback if the user selects an empty spot:",
-              "placeholder": "You didn't locate any hotspots, try again!"
+              "label": "Zpětná vazba, pokud uživatel vybere prázdné místo:",
+              "placeholder": "Nenalezli jste žádné aktivní body, zkuste to znovu!"
             },
             {
-              "label": "Show feedback as a popup"
+              "label": "Zobrazit zpětnou vazbu jako vyskakovací okno"
             },
             {
-              "label": "Localization",
+              "label": "Lokalizace",
               "fields": [
                 {
-                  "label": "Retry button text",
-                  "default": "Retry"
+                  "label": "Text opakovacího tlačítka",
+                  "default": "Opakovat"
                 },
                 {
-                  "label": "Close button text",
-                  "default": "Close"
+                  "label": "Text tlačítka zavřít ",
+                  "default": "Zavřít"
                 }
               ]
             }
@@ -69,8 +69,8 @@
       ]
     },
     {
-      "label": "Textual representation of the score bar for those using a readspeaker",
-      "default": "You got :num out of :total points"
+      "label": "Textové znázornění výsledkové lišty pro ty, kteří používají čtecí zařízení",
+      "default": "Získal jste :num ze :total bodů"
     }
   ]
 }
