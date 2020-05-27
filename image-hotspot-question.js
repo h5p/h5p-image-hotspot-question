@@ -150,7 +150,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     });
 
     // Resize image once loaded
-    this.$img.load(function () {
+    this.$img.on('load', function () {
       $loader.replaceWith(self.$img);
       self.trigger('resize');
     });
