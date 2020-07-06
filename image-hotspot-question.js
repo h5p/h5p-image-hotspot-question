@@ -129,7 +129,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     this.$wrapper = $('<div>', {
       'class': 'image-hotspot-question'
-    }).ready(function () {
+    });
+    this.$wrapper.ready(function () {
       var imageHeight = self.$wrapper.width() * (self.imageSettings.height / self.imageSettings.width);
       self.$wrapper.css('height', imageHeight + 'px');
     });
