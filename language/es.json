@@ -61,6 +61,10 @@
                 {
                   "label": "Texto del botón Cerrar",
                   "default": "Cerrar"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

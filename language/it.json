@@ -61,6 +61,10 @@
                 {
                   "label": "Testo del pulsante \"Chiudi\"",
                   "default": "Chiudi"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }
