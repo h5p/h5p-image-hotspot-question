@@ -71,6 +71,10 @@
     {
       "label": "Tekstimuotoinen esitys pistepalkista ruudunlukijalle",
       "default": "Sait :num pistettä :total pisteestä"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry"
     }
   ]
 }
