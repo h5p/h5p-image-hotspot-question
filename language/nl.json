@@ -71,6 +71,10 @@
     {
       "label": "Tekstuele weergave van de scorebalk voor wie een readspeaker gebruikt",
       "default": "Je hebt :num van de :total points"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry"
     }
   ]
 }
