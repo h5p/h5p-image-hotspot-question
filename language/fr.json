@@ -71,10 +71,6 @@
     {
       "label": "Représentation textuelle du panneau du score pour les utilisateurs de la synthèse vocale",
       "default": "Vous avez :num points sur un total de :total"
-    },
-    {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry"
     }
   ]
 }

@@ -71,10 +71,6 @@
     {
       "label": "閱讀器導讀文字-評分欄",
       "default": "您得到了:num 分，總分 :total"
-    },
-    {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry"
     }
   ]
 }

@@ -71,10 +71,6 @@
     {
       "label": "Text der Punkteleiste für Vorlesewerkzeuge (Barrierefreiheit)",
       "default": "Du hast :num von :total Punkten erreicht."
-    },
-    {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry"
     }
   ]
 }
