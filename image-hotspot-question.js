@@ -412,7 +412,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   };
 
   /**
-   * Display solution for this question.
+   * Display the first found solution for this question.
    * Used in contracts
    */
   ImageHotspotQuestion.prototype.showSolutions = function () {
