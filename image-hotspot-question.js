@@ -30,7 +30,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
         }
       },
       behaviour: {
-        enableRetry: true
+        enableRetry: true,
+        enableSolutionsButton: false
       },
       scoreBarLabel: 'You got :num out of :total points',
       a11yRetry: 'Retry the task. Reset all responses and start the task over again.',
