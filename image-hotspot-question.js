@@ -335,6 +335,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       'class': 'hotspot-feedback'
     }).appendTo(this.$imageWrapper);
 
+    // Required for resizing, although mixed purpose. Revert down below.
+    this.hotspotFeedback.hotspotChosen = true;
+
     // Center hotspot feedback on mouse click with fallback for firefox
     var feedbackPosX = (mouseEvent.offsetX || mouseEvent.pageX - $(mouseEvent.target).offset().left);
     var feedbackPosY = (mouseEvent.offsetY || mouseEvent.pageY - $(mouseEvent.target).offset().top);
@@ -353,6 +356,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     // Position feedback
     this.resizeHotspotFeedback();
+
+    // Not needed here
+    this.hotspotFeedback.hotspotChosen = false;
 
     this.hotspotFeedback.$element.addClass('correct');
 
