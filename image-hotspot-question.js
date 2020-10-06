@@ -335,8 +335,6 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       'class': 'hotspot-feedback'
     }).appendTo(this.$imageWrapper);
 
-    this.hotspotFeedback.hotspotChosen = true;
-
     // Center hotspot feedback on mouse click with fallback for firefox
     var feedbackPosX = (mouseEvent.offsetX || mouseEvent.pageX - $(mouseEvent.target).offset().left);
     var feedbackPosY = (mouseEvent.offsetY || mouseEvent.pageY - $(mouseEvent.target).offset().top);
