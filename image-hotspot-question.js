@@ -355,6 +355,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       this.hotspotFeedback.$element.remove();
     }
     this.hotspotFeedback.hotspotChosen = false;
+    this.score = 0;
 
     // Hide retry button
     this.hideButton('retry-button');
