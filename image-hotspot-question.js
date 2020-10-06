@@ -149,7 +149,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
       this.$img = $('<img>', {
         'class': 'hotspot-image',
-        'src': H5P.getPath(this.imageSettings.path, this.contentId)
+        'src': (this.imageSettings.path && this.imageSettings.path !== '') ? H5P.getPath(this.imageSettings.path, this.contentId) : ''
       });
 
       // Resize image once loaded
