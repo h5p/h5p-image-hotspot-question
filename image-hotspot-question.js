@@ -65,10 +65,16 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     this.maxScore = 1;
 
     /**
-     * State for not accepting clicks
+     * State for not accepting clicks.
      * @type {boolean}
      */
     this.disabled = false;
+
+    /**
+     * State for answer given.
+     * @type {boolean}
+     */
+    this.answerGiven = false;
 
     /**
      * Keeps track of parameters
@@ -208,7 +214,6 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     this.hotspotSettings.hotspot.forEach(function (hotspot) {
       self.attachHotspot(hotspot);
     });
-
   };
 
   /**
@@ -252,6 +257,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     if (this.hotspotFeedback.hotspotChosen) {
       return;
     }
+
+    this.answerGiven = true;
 
     this.hotspotFeedback.$element = $('<div>', {
       'class': 'hotspot-feedback'
@@ -308,7 +315,6 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     // Trigger xAPI completed event
     this.trigger(this.getXAPIAnswerEvent());
-    // this.triggerXAPIScored(this.getScore(), this.getMaxScore(), 'answered');
   };
 
   /**
@@ -350,14 +356,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       self.hotspotFeedback.pixelOffsetX = (self.hotspotFeedback.$element.width() / 2);
       self.hotspotFeedback.pixelOffsetY = (self.hotspotFeedback.$element.height() / 2);
 
-      // Required for resizing, although mixed purpose. Revert down below.
-      self.hotspotFeedback.hotspotChosen = true;
-
       // Position feedback
+      self.hotspotFeedback.hotspotChosen = true;
       self.resizeHotspotFeedback();
-
-      // Not needed here
-      self.hotspotFeedback.hotspotChosen = false;
 
       // Finally add fade in animation to hotspot feedback
       self.hotspotFeedback.$element.addClass('correct');
@@ -393,7 +394,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    * @returns {boolean}
    */
   ImageHotspotQuestion.prototype.getAnswerGiven = function () {
-    return this.hotspotFeedback.hotspotChosen;
+    return this.answerGiven;
   };
 
   /**
@@ -442,6 +443,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     this.removeFeedback();
 
     this.disabled = false;
+
+    this.answerGiven = false;
   };
 
   /**
