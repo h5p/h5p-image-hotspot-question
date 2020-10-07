@@ -318,52 +318,35 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   };
 
   /**
-   * Show first correct hotspot.
-   * TODO: Wouldn't showing all solutions make more sense?
+   * Show all correct hotspots.
    */
-  ImageHotspotQuestion.prototype.showCorrectHotspot = function () {
+  ImageHotspotQuestion.prototype.showCorrectHotspots = function () {
     const self = this;
-
-    if (this.getScore() === this.getMaxScore()) {
-      return; // Already showing a correct hotspot
-    }
 
     // Remove old feedback
     this.$wrapper.find('.hotspot-feedback').remove();
 
-    // Find index of first solution
-    const index = self.hotspotSettings.hotspot.reduce(function (result, spot, index) {
-      return (result !== -1 || !spot.userSettings.correct) ? result : index;
-    }, -1);
+    this.hotspotSettings.hotspot.forEach(function (hotspot) {
+      if (!hotspot.userSettings.correct) {
+        return; // Skip, wrong hotspot
+      }
 
-    if (index === -1) {
-      return;
-    }
-
-    // Wrapper may not yet be visible if used as subcontent
-    setTimeout(function () {
-      self.hotspotFeedback.$element = $('<div>', {
+      // Compute and set position of feedback circle
+      const $element = $('<div>', {
         'class': 'hotspot-feedback'
       }).appendTo(self.$imageWrapper);
 
-      const $correctHotspot = self.$hotspots[index];
-      const feedbackPosX = $correctHotspot.position().left + $correctHotspot.width() / 2;
-      const feedbackPosY = $correctHotspot.position().top + $correctHotspot.height() / 2;
+      const centerX = (hotspot.computedSettings.x + hotspot.computedSettings.width / 2) + '%';
+      const centerY = (hotspot.computedSettings.y + hotspot.computedSettings.height / 2) + '%';
 
-      // Keep position and pixel offsets for resizing
-      self.hotspotFeedback.percentagePosX = feedbackPosX / (self.$imageWrapper.width() / 100);
-      self.hotspotFeedback.percentagePosY = feedbackPosY / (self.$imageWrapper.height() / 100);
-      self.hotspotFeedback.pixelOffsetX = (self.hotspotFeedback.$element.width() / 2);
-      self.hotspotFeedback.pixelOffsetY = (self.hotspotFeedback.$element.height() / 2);
-
-      // Position feedback
-      self.hotspotFeedback.hotspotChosen = true;
-      self.resizeHotspotFeedback();
-
-      // Finally add fade in animation to hotspot feedback
-      self.hotspotFeedback.$element.addClass('correct');
-      self.hotspotFeedback.$element.addClass('fade-in');
-    }, 0);
+      $element
+        .css({
+          left: 'calc(' + centerX + ' - ' + $element.width() / 2 + 'px' + ')',
+          top: 'calc(' + centerY + ' - ' + $element.height() / 2 + 'px' + ')'
+        })
+        .addClass('correct')
+        .addClass('fade-in');
+    });
   };
 
   /**
@@ -421,7 +404,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    */
   ImageHotspotQuestion.prototype.showSolutions = function () {
     this.hideButton('retry-button');
-    this.showCorrectHotspot();
+    this.showCorrectHotspots();
     this.setFeedback('', this.getScore(), this.getMaxScore(), this.params.scoreBarLabel);
     this.disabled = true;
   };
@@ -431,10 +414,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    * Used in contracts.
    */
   ImageHotspotQuestion.prototype.resetTask = function () {
-    // Remove hotspot feedback
-    if (this.hotspotFeedback.$element) {
-      this.hotspotFeedback.$element.remove();
-    }
+    // Remove old feedback
+    this.$wrapper.find('.hotspot-feedback').remove();
+
     this.hotspotFeedback.hotspotChosen = false;
     this.score = 0;
 
