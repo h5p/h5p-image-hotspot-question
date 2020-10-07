@@ -420,7 +420,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    * Used in contracts
    */
   ImageHotspotQuestion.prototype.showSolutions = function () {
+    this.hideButton('retry-button');
     this.showCorrectHotspot();
+    this.setFeedback('', this.getScore(), this.getMaxScore(), this.params.scoreBarLabel);
     this.disabled = true;
   };
 
