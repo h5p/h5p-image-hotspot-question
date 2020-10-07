@@ -313,6 +313,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
   /**
    * Show first correct hotspot.
+   * TODO: Wouldn't showing all solutions make more sense?
    */
   ImageHotspotQuestion.prototype.showCorrectHotspot = function () {
     const self = this;
@@ -321,62 +322,47 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       return; // Already showing a correct hotspot
     }
 
-    this.resetTask();
+    // Remove old feedback
+    this.$wrapper.find('.hotspot-feedback').remove();
 
-    let foundSolution = false;
+    // Find index of first solution
+    const index = self.hotspotSettings.hotspot.reduce(function (result, spot, index) {
+      return (result !== -1 || !spot.userSettings.correct) ? result : index;
+    }, -1);
 
-    let $clickedElement, mouseEvent, hotspot;
-
-    this.hotspotSettings.hotspot.forEach(function (spot, index) {
-      if (spot.userSettings.correct && !foundSolution) {
-        var $correctHotspot = self.$hotspots[index];
-
-        $clickedElement = $correctHotspot;
-        mouseEvent = {offsetX: ($correctHotspot.width() / 2), offsetY: ($correctHotspot.height() / 2)};
-        hotspot = spot;
-
-        foundSolution = true;
-      }
-    });
-
-    // Do not create new hotspot if one exists
-    if (this.hotspotFeedback.hotspotChosen) {
+    if (index === -1) {
       return;
     }
 
-    this.hotspotFeedback.$element = $('<div>', {
-      'class': 'hotspot-feedback'
-    }).appendTo(this.$imageWrapper);
+    // Wrapper may not yet be visible if used as subcontent
+    setTimeout(function () {
+      self.hotspotFeedback.$element = $('<div>', {
+        'class': 'hotspot-feedback'
+      }).appendTo(self.$imageWrapper);
 
-    // Required for resizing, although mixed purpose. Revert down below.
-    this.hotspotFeedback.hotspotChosen = true;
+      const $correctHotspot = self.$hotspots[index];
+      const feedbackPosX = $correctHotspot.position().left + $correctHotspot.width() / 2;
+      const feedbackPosY = $correctHotspot.position().top + $correctHotspot.height() / 2;
 
-    // Center hotspot feedback on mouse click with fallback for firefox
-    var feedbackPosX = (mouseEvent.offsetX || mouseEvent.pageX - $(mouseEvent.target).offset().left);
-    var feedbackPosY = (mouseEvent.offsetY || mouseEvent.pageY - $(mouseEvent.target).offset().top);
+      // Keep position and pixel offsets for resizing
+      self.hotspotFeedback.percentagePosX = feedbackPosX / (self.$imageWrapper.width() / 100);
+      self.hotspotFeedback.percentagePosY = feedbackPosY / (self.$imageWrapper.height() / 100);
+      self.hotspotFeedback.pixelOffsetX = (self.hotspotFeedback.$element.width() / 2);
+      self.hotspotFeedback.pixelOffsetY = (self.hotspotFeedback.$element.height() / 2);
 
-    // Apply clicked element offset if click was not in wrapper
-    if (!$clickedElement.hasClass('image-wrapper')) {
-      feedbackPosX += $clickedElement.position().left;
-      feedbackPosY += $clickedElement.position().top;
-    }
+      // Required for resizing, although mixed purpose. Revert down below.
+      self.hotspotFeedback.hotspotChosen = true;
 
-    // Keep position and pixel offsets for resizing
-    this.hotspotFeedback.percentagePosX = feedbackPosX / (this.$imageWrapper.width() / 100);
-    this.hotspotFeedback.percentagePosY = feedbackPosY / (this.$imageWrapper.height() / 100);
-    this.hotspotFeedback.pixelOffsetX = (this.hotspotFeedback.$element.width() / 2);
-    this.hotspotFeedback.pixelOffsetY = (this.hotspotFeedback.$element.height() / 2);
+      // Position feedback
+      self.resizeHotspotFeedback();
 
-    // Position feedback
-    this.resizeHotspotFeedback();
+      // Not needed here
+      self.hotspotFeedback.hotspotChosen = false;
 
-    // Not needed here
-    this.hotspotFeedback.hotspotChosen = false;
-
-    this.hotspotFeedback.$element.addClass('correct');
-
-    // Finally add fade in animation to hotspot feedback
-    this.hotspotFeedback.$element.addClass('fade-in');
+      // Finally add fade in animation to hotspot feedback
+      self.hotspotFeedback.$element.addClass('correct');
+      self.hotspotFeedback.$element.addClass('fade-in');
+    }, 0);
   };
 
   /**
