@@ -8,7 +8,7 @@
           "fields": [
             {
               "label": "Hintergrundbild",
-              "description": "Wähle ein Bild als Hintergrundbild für die Hotspot-Bilder-Aufgabe"
+              "description": "Wähle ein Bild als Hintergrundbild für die Hotspot-Bilder-Aufgabe."
             }
           ]
         },
@@ -73,8 +73,8 @@
       "default": "Du hast :num von :total Punkten erreicht."
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Beschreibung des \"Wiederholen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+      "default": "Die Aufgabe wiederholen. Alle Versuche werden zurückgesetzt und die Aufgabe wird erneut gestartet."
     }
   ]
 }
