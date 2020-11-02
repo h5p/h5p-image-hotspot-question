@@ -71,6 +71,10 @@
     {
       "label": "Rappresentazione testuale sulla barra del punteggio per chi usa un lettore vocale",
       "default": "Il tuo punteggio è :num su :total"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
     }
   ]
 }

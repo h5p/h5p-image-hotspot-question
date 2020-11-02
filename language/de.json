@@ -8,7 +8,7 @@
           "fields": [
             {
               "label": "Hintergrundbild",
-              "description": "Wähle ein Bild als Hintergrundbild für die Hotspot-Bilder-Aufgabe"
+              "description": "Wähle ein Bild als Hintergrundbild für die Hotspot-Bilder-Aufgabe."
             }
           ]
         },
@@ -71,6 +71,10 @@
     {
       "label": "Text der Punkteleiste für Vorlesewerkzeuge (Barrierefreiheit)",
       "default": "Du hast :num von :total Punkten erreicht."
+    },
+    {
+      "label": "Beschreibung des \"Wiederholen\"-Buttons (für Hilfsmittel zur Barrierefreiheit)",
+      "default": "Die Aufgabe wiederholen. Alle Versuche werden zurückgesetzt und die Aufgabe wird erneut gestartet."
     }
   ]
 }

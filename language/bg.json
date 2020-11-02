@@ -71,6 +71,10 @@
     {
       "label": "Текстово представяне на лентата с резултати за тези, които използват екранен четец",
       "default": "Ти получи :num от общо :total точки"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
     }
   ]
 }

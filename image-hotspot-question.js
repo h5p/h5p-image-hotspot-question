@@ -32,7 +32,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       behaviour: {
         enableRetry: true
       },
-      scoreBarLabel: 'You got :num out of :total points'
+      scoreBarLabel: 'You got :num out of :total points',
+      a11yRetry: 'Retry',
     };
 
     // Inheritance
@@ -297,7 +298,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     this.addButton('retry-button', this.params.imageHotspotQuestion.hotspotSettings.l10n.retryText, function () {
       self.resetTask();
-    }, false);
+    }, false, {
+      'aria-label': this.params.a11yRetry,
+    });
   };
 
   /**
