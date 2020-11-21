@@ -161,5 +161,13 @@
     "default": "You got :num out of :total points",
     "importance": "low",
     "common": true
+  },
+  {
+    "name": "a11yRetry",
+    "type": "text",
+    "label": "Assistive technology description for \"Retry\" button",
+    "default": "Retry the task. Reset all responses and start the task over again.",
+    "importance": "low",
+    "common": true
   }
 ]

@@ -33,7 +33,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       behaviour: {
         enableRetry: true
       },
-      scoreBarLabel: 'You got :num out of :total points'
+      scoreBarLabel: 'You got :num out of :total points',
+      a11yRetry: 'Retry the task. Reset all responses and start the task over again.',
     };
 
     // Inheritance
@@ -136,29 +137,37 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       self.$wrapper.css('height', imageHeight + 'px');
     });
 
-    this.$imageWrapper = $('<div>', {
-      'class': 'image-wrapper'
-    }).appendTo(this.$wrapper);
+    if (this.imageSettings && this.imageSettings.path) {
+      this.$imageWrapper = $('<div>', {
+        'class': 'image-wrapper'
+      }).appendTo(this.$wrapper);
 
-    // Image loader screen
-    var $loader = $('<div>', {
-      'class': 'image-loader'
-    }).appendTo(this.$imageWrapper)
-      .addClass('loading');
+      // Image loader screen
+      var $loader = $('<div>', {
+        'class': 'image-loader'
+      }).appendTo(this.$imageWrapper)
+        .addClass('loading');
 
-    this.$img = $('<img>', {
-      'class': 'hotspot-image',
-      'src': H5P.getPath(this.imageSettings.path, this.contentId)
-    });
+      this.$img = $('<img>', {
+        'class': 'hotspot-image',
+        'src': H5P.getPath(this.imageSettings.path, this.contentId)
+      });
 
-    // Resize image once loaded
-    this.$img.on('load', function () {
-      $loader.replaceWith(self.$img);
-      self.trigger('resize');
-    });
+      // Resize image once loaded
+      this.$img.on('load', function () {
+        $loader.replaceWith(self.$img);
+        self.trigger('resize');
+      });
 
-    this.attachHotspots();
-    this.initImageClickListener();
+      this.attachHotspots();
+      this.initImageClickListener();
+
+    }
+    else {
+      const $message = $('<div>')
+        .text('No background image was added!')
+        .appendTo(this.$wrapper);
+    }
 
     return this.$wrapper;
   };
@@ -293,7 +302,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     this.addButton('retry-button', this.params.imageHotspotQuestion.hotspotSettings.l10n.retryText, function () {
       self.resetTask();
-    }, false);
+    }, false, {
+      'aria-label': this.params.a11yRetry,
+    });
   };
 
   /**

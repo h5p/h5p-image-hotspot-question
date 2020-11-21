@@ -75,6 +75,10 @@
     {
       "label": "Representação textual da barra de pontuação para aqueles que usam leitores de telas",
       "default": "Você marcou :num out de :total pontos"
+    },
+    {
+      "label": "Assistive technology description for \"Retry\" button",
+      "default": "Retry the task. Reset all responses and start the task over again."
     }
   ]
 }
