@@ -61,6 +61,10 @@
                 {
                   "label": "Текст за бутона за затваряне",
                   "default": "Затвори"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

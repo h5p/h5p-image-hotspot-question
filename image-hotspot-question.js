@@ -25,7 +25,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
           showFeedbackAsPopup: true,
           l10n: {
             retryText: 'Retry',
-            closeText: 'Close'
+            closeText: 'Close',
+            correctText: 'Correct!'
           }
         }
       },
@@ -269,9 +270,12 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       }
     }
 
-    var feedbackText = (hotspot && hotspot.userSettings.feedbackText ? hotspot.userSettings.feedbackText : this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback);
-    if (!feedbackText) {
-      feedbackText = '&nbsp;';
+    let feedbackText;
+    if (!hotspot) {
+      feedbackText = this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback || '&nbsp;';
+    }
+    else {
+      feedbackText = hotspot.userSettings.feedbackText || this.params.imageHotspotQuestion.hotspotSettings.l10n.correctText;
     }
 
     // Send these settings into setFeedback to turn feedback into a popup.

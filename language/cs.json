@@ -61,6 +61,10 @@
                 {
                   "label": "Text tlačítka zavřít ",
                   "default": "Zavřít"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

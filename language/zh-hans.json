@@ -61,6 +61,10 @@
                 {
                   "label": "关闭功能钮名称",
                   "default": "关闭"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

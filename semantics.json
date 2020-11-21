@@ -140,6 +140,13 @@
                 "type": "text",
                 "default": "Close",
                 "optional": true
+              },
+              {
+                "name": "correctText",
+                "label": "Default message for correct hotspots",
+                "type": "text",
+                "default": "Correct!",
+                "optional": true
               }
             ]
           }
