@@ -1,0 +1,80 @@
+{
+  "semantics": [
+    {
+      "label": "",
+      "fields": [
+        {
+          "label": "",
+          "fields": [
+            {
+              "label": "",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "label": "",
+          "description": "",
+          "fields": [
+            {
+              "label": "",
+              "description": ""
+            },
+            {
+              "label": "",
+              "entity": "",
+              "field": {
+                "label": "",
+                "fields": [
+                  {
+                    "label": "",
+                    "fields": [
+                      {
+                        "label": "",
+                        "description": ""
+                      },
+                      {
+                        "label": ""
+                      }
+                    ]
+                  },
+                  {
+                    "label": ""
+                  }
+                ]
+              }
+            },
+            {
+              "label": "",
+              "placeholder": ""
+            },
+            {
+              "label": ""
+            },
+            {
+              "label": "",
+              "fields": [
+                {
+                  "label": "",
+                  "default": ""
+                },
+                {
+                  "label": "",
+                  "default": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "",
+      "default": "شما از ‎:total امتیاز، ‎:num امتیاز دریافت کردید"
+    },
+    {
+      "label": "",
+      "default": ""
+    }
+  ]
+}
