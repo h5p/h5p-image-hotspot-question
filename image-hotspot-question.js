@@ -132,8 +132,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       'class': 'image-hotspot-question'
     });
     this.$wrapper.ready(function () {
-      var imageHeight = self.$wrapper.width() * (self.imageSettings.height / self.imageSettings.width);
-      self.$wrapper.css('height', imageHeight + 'px');
+      self.trigger('resize');
     });
 
     if (this.imageSettings && this.imageSettings.path) {
