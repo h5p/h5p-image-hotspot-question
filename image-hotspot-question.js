@@ -318,7 +318,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    * @returns {boolean}
    */
   ImageHotspotQuestion.prototype.getAnswerGiven = function () {
-    return this.hotspotChosen;
+    return this.hotspotFeedback.hotspotChosen;
   };
 
   /**
