@@ -1,13 +1,13 @@
 {
   "semantics": [
     {
-      "label": "Image Hotspot Question Editor",
+      "label": "이미지 핫스팟 에디터",
       "fields": [
         {
-          "label": "Background image",
+          "label": "배경 이미지",
           "fields": [
             {
-              "label": "Background image",
+              "label": "배경 이미지",
               "description": "Select an image to use as background for the image hotspot question."
             }
           ]
