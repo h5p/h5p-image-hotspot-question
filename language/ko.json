@@ -1,7 +1,7 @@
 {
   "semantics": [
     {
-      "label": "이미지 핫스팟 질문 편집기",
+      "label": "이미지 핫스팟 에디터",
       "fields": [
         {
           "label": "배경 이미지",

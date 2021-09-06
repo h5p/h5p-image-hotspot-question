@@ -73,8 +73,8 @@
       "default": "Il tuo punteggio è :num su :total"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Descrizione della tecnologia assistiva per il pulsante \"Riprova\"",
+      "default": "Riprova l'esercizio. Risetta tutte le risposte e inizia di nuovo l'esercizio."
     }
   ]
 }
