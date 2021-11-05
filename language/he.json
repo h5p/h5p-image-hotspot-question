@@ -4,37 +4,37 @@
       "label": "Image Hotspot Question Editor",
       "fields": [
         {
-          "label": "Background image",
+          "label": "תמונת רקע",
           "fields": [
             {
-              "label": "Background image",
-              "description": "Select an image to use as background the image hotspot question."
+              "label": "תמונת רקע",
+              "description": "Select an image to use as background for the image hotspot question."
             }
           ]
         },
         {
-          "label": "Hotspots",
+          "label": "נקודות־חמות",
           "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
           "fields": [
             {
-              "label": "Task description",
+              "label": "תיאור משימה",
               "description": "Instructions to the user."
             },
             {
-              "label": "Hotspot",
-              "entity": "Hotspot",
+              "label": "נקודה־חמה",
+              "entity": "נקודה־חמה",
               "field": {
-                "label": "Hotspot",
+                "label": "נקודה־חמה",
                 "fields": [
                   {
                     "label": "userSettings",
                     "fields": [
                       {
-                        "label": "Correct",
+                        "label": "נכון",
                         "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
                       },
                       {
-                        "label": "Feedback"
+                        "label": "משוב"
                       }
                     ]
                   },
@@ -52,15 +52,15 @@
               "label": "Show feedback as a popup"
             },
             {
-              "label": "Localization",
+              "label": "תרגום",
               "fields": [
                 {
-                  "label": "Retry button text",
-                  "default": "Retry"
+                  "label": "תוית כפתור ניסיון חוזר",
+                  "default": "נסו שוב"
                 },
                 {
-                  "label": "Close button text",
-                  "default": "Close"
+                  "label": "תוית כפתור סגירה",
+                  "default": "סגירה"
                 },
                 {
                   "label": "Default message for correct hotspots",
@@ -73,12 +73,12 @@
       ]
     },
     {
-      "label": "Textual representation of the score bar for those using a readspeaker",
-      "default": "You got :num out of :total points"
+      "label": "תצוגה חזותית של סרגל ניקוד למי שמשתמש בתוכנת הקראה",
+      "default": "התקבלו :num מתוך :total נקודות"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "תיאור טכנולוגיה מסייעת עבור כפתור \"נסה שוב\"",
+      "default": "נסו את המשימה שוב. אפסו את כל ניסיונות המענה והתחילו את המשימה מחדש."
     }
   ]
 }

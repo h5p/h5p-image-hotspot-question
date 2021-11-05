@@ -77,8 +77,8 @@
       "default": "Je hebt :num van de :total points"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Ondersteunende technologie beschrijving voor \"Opnieuw\" knop",
+      "default": "Probeer de taak opnieuw. Reset alle antwoorden en start de taak opnieuw."
     }
   ]
 }

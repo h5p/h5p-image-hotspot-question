@@ -77,8 +77,8 @@
       "default": ":total puntutik :num lortu dituzu"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "\"Berriz saiatu\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
     }
   ]
 }

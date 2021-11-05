@@ -77,8 +77,8 @@
       "default": "Ти получи :num от общо :total точки"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Описание за помощни технологии бутон \"Опитай пак\" ",
+      "default": "Опитай задачата отново. Изчистване на всички отговори и започване на задачата отначало."
     }
   ]
 }

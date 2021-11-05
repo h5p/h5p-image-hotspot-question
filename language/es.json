@@ -8,33 +8,33 @@
           "fields": [
             {
               "label": "Imagen de fondo",
-              "description": "Seleccione una imagen para usar como fondo del punto de acceso."
+              "description": "Seleccione una imagen para usar como fondo de la pregunta hotspot de imagen."
             }
           ]
         },
         {
-          "label": "Punto de acceso",
-          "description": "Arrastre y suelte la figura deseada desde la barra de herramientas para crear un nuevo punto de acceso. Haga doble clic para editar un punto de acceso existente. Arrastra el punto de acceso para moverlo. Tire del controlador de cambio de tamaño en la esquina inferior derecha para cambiar el tamaño.",
+          "label": "Hotspots",
+          "description": "Arrastre y suelte la figura deseada desde la barra de herramientas para crear un nuevo hotspot. Haga doble clic para editar un hotspot existente. Arrastra el hotspot para moverlo. Tire del controlador de cambio de tamaño en la esquina inferior derecha para cambiar el tamaño.",
           "fields": [
             {
-              "label": "Descripción de la tarea",
+              "label": "Descripción del trabajo",
               "description": "Instrucciones para el usuario."
             },
             {
-              "label": "Punto de acceso",
-              "entity": "Punto de acceso",
+              "label": "Hotspot",
+              "entity": "Hotspot",
               "field": {
-                "label": "Punto de acceso",
+                "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "Ajustes de usuario",
+                    "label": "AjustesdelUsuario",
                     "fields": [
                       {
                         "label": "Correcto",
-                        "description": "Puede haber múltiples puntos de acceso correctos. Sin embargo, el usuario recibe comentarios correctos/incorrectos inmediatamente después del primer clic."
+                        "description": "Puede haber múltiples hotspots correctos. Sin embargo, el usuario recibe retroalimentación de correcto/incorrecto inmediatamente después del primer clic."
                       },
                       {
-                        "label": "Realimentación"
+                        "label": "Retroalimentación"
                       }
                     ]
                   },
@@ -45,17 +45,17 @@
               }
             },
             {
-              "label": "Comentario si el usuario selecciona un lugar vacío:",
-              "placeholder": "No has encontrado ningún punto de acceso, intenta de nuevo!"
+              "label": "Retroalimentación si el usuario selecciona un lugar vacío:",
+              "placeholder": "¡No ha encontrado ningún hotspot, inténtelo de nuevo!"
             },
             {
-              "label": "Mostrar comentarios en una ventana emergente"
+              "label": "Mostrar retroalimentación en una ventana emergente"
             },
             {
               "label": "Localización",
               "fields": [
                 {
-                  "label": "Texto del botón reintentar",
+                  "label": "Texto del botón Reintentar",
                   "default": "Reintentar"
                 },
                 {
@@ -73,12 +73,12 @@
       ]
     },
     {
-      "label": "Representación textual de la barra de puntaje para aquellos que usan un revisor lector en voz alta",
-      "default": "Tienes :num :puntos totales"
+      "label": "Representación textual de la barra de puntaje para aquellos que usan un lector de texto en voz alta",
+      "default": "Obtuvo :num de un total de :total puntos"
     },
     {
-      "label": "Etiqueta de tecnología asistiva para botón \"Reintentar\" ",
-      "default": "Reintentar el  trabajo. Reiniciar todas las respuestas e iniciar el trabajo de nuevo."
+      "label": "Etiqueta de tecnología asistiva para botón \"Reintentar\"",
+      "default": "Reintentar el trabajo. Reiniciar todas las respuestas e iniciar el trabajo de nuevo."
     }
   ]
 }
