@@ -17,7 +17,7 @@
             "type": "image",
             "label": "Background image",
             "importance": "high",
-            "description": "Select an image to use as background the image hotspot question."
+            "description": "Select an image to use as background for the image hotspot question."
           }
         ]
       },
@@ -159,7 +159,7 @@
     "name": "a11yRetry",
     "type": "text",
     "label": "Assistive technology description for \"Retry\" button",
-    "default": "Retry",
+    "default": "Retry the task. Reset all responses and start the task over again.",
     "importance": "low",
     "common": true
   }

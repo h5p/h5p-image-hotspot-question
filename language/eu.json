@@ -73,8 +73,8 @@
       "default": ":total puntutik :num lortu dituzu"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry"
+      "label": "\"Berriz saiatu\" botoiaren laguntza-teknologientzako etiketa",
+      "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
     }
   ]
 }

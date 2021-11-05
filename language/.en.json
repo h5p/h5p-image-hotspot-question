@@ -8,7 +8,7 @@
           "fields": [
             {
               "label": "Background image",
-              "description": "Select an image to use as background the image hotspot question."
+              "description": "Select an image to use as background for the image hotspot question."
             }
           ]
         },
@@ -74,7 +74,7 @@
     },
     {
       "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry"
+      "default": "Retry the task. Reset all responses and start the task over again."
     }
   ]
 }

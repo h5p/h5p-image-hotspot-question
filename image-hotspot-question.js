@@ -34,7 +34,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
         enableSolutionsButton: false
       },
       scoreBarLabel: 'You got :num out of :total points',
-      a11yRetry: 'Retry',
+      a11yRetry: 'Retry the task. Reset all responses and start the task over again.',
     };
 
     // Inheritance
@@ -151,8 +151,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       'class': 'image-hotspot-question'
     });
     this.$wrapper.ready(function () {
-      var imageHeight = self.$wrapper.width() * (self.imageSettings.height / self.imageSettings.width);
-      self.$wrapper.css('height', imageHeight + 'px');
+      self.trigger('resize');
     });
 
     if (this.imageSettings && this.imageSettings.path) {
