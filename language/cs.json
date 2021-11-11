@@ -8,7 +8,7 @@
           "fields": [
             {
               "label": "Obrázek na pozadí",
-              "description": "Vyberte obrázek, který chcete použít jako pozadí otázky aktivních bodů obrázku."
+              "description": "Vyberte obrázek, který chcete použít jako pozadí pro otázku aktivního bodu obrázku."
             }
           ]
         },
@@ -59,7 +59,7 @@
                   "default": "Opakovat"
                 },
                 {
-                  "label": "Text tlačítka zavřít ",
+                  "label": "Text tlačítka zavřít",
                   "default": "Zavřít"
                 }
               ]
@@ -73,8 +73,8 @@
       "default": "Získal jste :num ze :total bodů"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Popisek podpůrné technologie pro tlačítko \"Opakovat\"",
+      "default": "Zopakovat úkol. Resetovat všechny odpovědi a spustit úlohu znovu."
     }
   ]
 }
