@@ -395,7 +395,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       'en-US': this.getTitle()
     };
     definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
-    definition.interactionType = 'general';
+    definition.interactionType = 'other';
     return definition;
   };
 
@@ -432,11 +432,6 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     // Clear feedback
     this.removeFeedback();
-
-    // Reset timer
-    if (this.isRoot()) {
-      this.setActivityStarted(true);
-    }
   };
 
   /**
