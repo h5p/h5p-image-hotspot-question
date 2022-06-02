@@ -8,7 +8,7 @@
           "fields": [
             {
               "label": "Atzeko planoko irudia",
-              "description": "Hautatu leku berodun irudien galderen atzeko planoko irudia."
+              "description": "Hautatu leku berodun irudien galderen atzeko planoko irudirako."
             }
           ]
         },
@@ -74,10 +74,10 @@
     },
     {
       "label": "Puntuazio barraren testu adierazpena irakurgailua erabiltzen dutenentzat",
-      "default": ":total puntutik :num lortu dituzu"
+      "default": ":total puntutik :num puntu lortu duzu"
     },
     {
-      "label": "\"Berriz saiatu\" botoiaren laguntza-teknologientzako etiketa",
+      "label": "\"Saiatu berriro\" botoiaren laguntza-teknologientzako etiketa",
       "default": "Zeregina berriz egiten saiatu. Berrabiarazi erantzun guztiak eta hasi zeregina berriz."
     }
   ]
