@@ -353,6 +353,12 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.triggerAnswered = function () {
     var self = this;
     var xAPIEvent = self.createXAPIEventTemplate('answered');
+
+    // Add score to xAPIEvent
+    const score = self.getScore();
+    const maxScore = self.getMaxScore();
+    xAPIEvent.setScoredResult(score, maxScore, self, true, score === maxScore);
+
     self.addQuestionToXAPI(xAPIEvent);
     self.trigger(xAPIEvent);
   };
