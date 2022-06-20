@@ -354,6 +354,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     var self = this;
     var xAPIEvent = self.createXAPIEventTemplate('answered');
     self.addQuestionToXAPI(xAPIEvent);
+    self.addResponseToXAPI(xAPIEvent);
     self.trigger(xAPIEvent);
   };
 
@@ -366,8 +367,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.getXAPIData = function () {
     var self = this;
     var xAPIEvent = self.createXAPIEventTemplate('answered');
-    xAPIEvent.setScoredResult(self.getScore(), self.getMaxScore(), self, true, true);
     self.addQuestionToXAPI(xAPIEvent);
+    self.addResponseToXAPI(xAPIEvent);
     return {
       statement: xAPIEvent.data.statement
     };
@@ -379,6 +380,17 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
   ImageHotspotQuestion.prototype.addQuestionToXAPI = function (xAPIEvent) {
     var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
     $.extend(true, definition, this.getxAPIDefinition());
+  };
+
+  /**
+   * Add the response part to an xAPI event
+   *
+   * @param {H5P.XAPIEvent} xAPIEvent
+   *  The xAPI event we will add a response to
+   */
+  ImageHotspotQuestion.prototype.addResponseToXAPI = function (xAPIEvent) {
+    var self = this;
+    xAPIEvent.setScoredResult(self.getScore(), self.getMaxScore(), self, true, true);
   };
 
   /**
