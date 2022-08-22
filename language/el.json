@@ -61,6 +61,10 @@
                 {
                   "label": "Ετικέτα κουμπιού κλεισίματος",
                   "default": "Κλείσιμο"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

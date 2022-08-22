@@ -61,6 +61,10 @@
                 {
                   "label": "תוית כפתור סגירה",
                   "default": "סגירה"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

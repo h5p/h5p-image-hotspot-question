@@ -61,6 +61,10 @@
                 {
                   "label": "Text del botó de tancar",
                   "default": "Tanca"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

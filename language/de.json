@@ -61,6 +61,10 @@
                 {
                   "label": "Beschriftung des \"Schließen\"-Buttons",
                   "default": "Schließen"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

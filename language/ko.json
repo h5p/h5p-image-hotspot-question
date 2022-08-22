@@ -61,6 +61,10 @@
                 {
                   "label": "닫기 버튼 텍스트",
                   "default": "닫기"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

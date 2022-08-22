@@ -61,6 +61,10 @@
                 {
                   "label": "Sluit knoppieteks",
                   "default": "Sluit"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }

@@ -61,6 +61,10 @@
                 {
                   "label": "Tekst \"Afsluiten\"-knop",
                   "default": "Afsluiten"
+                },
+                {
+                  "label": "Default message for correct hotspots",
+                  "default": "Correct!"
                 }
               ]
             }
