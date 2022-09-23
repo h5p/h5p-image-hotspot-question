@@ -115,6 +115,11 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       this.previousState = contentData.previousState;
     }
 
+    // Start activity timer
+    if (this.isRoot()) {
+      this.setActivityStarted();
+    }
+
     // Register resize listener with h5p
     this.on('resize', this.resize);
   }
@@ -317,7 +322,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     this.hotspotFeedback.$element.addClass('fade-in');
 
     // Trigger xAPI completed event
-    this.trigger(this.getXAPIAnswerEvent());
+   this.triggerAnswered();
   };
 
   /**
@@ -392,6 +397,10 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     return this.score;
   };
 
+  ImageHotspotQuestion.prototype.getTitle = function () {
+    return H5P.createTitle((this.contentData.metadata && this.contentData.metadata.title) ? this.contentData.metadata.title : 'Fill In');
+  };
+
   /**
    * Gets the max score for this question.
    * Used in contracts.
@@ -399,6 +408,64 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    */
   ImageHotspotQuestion.prototype.getMaxScore = function () {
     return this.maxScore;
+  };
+
+  /**
+   * Trigger xAPI answered event
+   */
+  ImageHotspotQuestion.prototype.triggerAnswered = function () {
+    var self = this;
+    var xAPIEvent = self.createXAPIEventTemplate('answered');
+
+    // Add score to xAPIEvent
+    const score = self.getScore();
+    const maxScore = self.getMaxScore();
+    xAPIEvent.setScoredResult(score, maxScore, self, true, score === maxScore);
+
+    self.addQuestionToXAPI(xAPIEvent);
+    self.trigger(xAPIEvent);
+  };
+
+  /**
+   * Get xAPI data.
+   * Contract used by report rendering engine.
+   * 
+   * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-6}
+   */
+  ImageHotspotQuestion.prototype.getXAPIData = function () {
+    var self = this;
+    var xAPIEvent = self.createXAPIEventTemplate('answered');
+    xAPIEvent.setScoredResult(self.getScore(), self.getMaxScore(), self, true, true);
+    self.addQuestionToXAPI(xAPIEvent);
+    return {
+      statement: xAPIEvent.data.statement
+    };
+  };
+
+  /**
+   * Add the question itselt to the definition part of an xAPIEvent
+   */
+  ImageHotspotQuestion.prototype.addQuestionToXAPI = function (xAPIEvent) {
+    var definition = xAPIEvent.getVerifiedStatementValue(['object', 'definition']);
+    $.extend(true, definition, this.getxAPIDefinition());
+  };
+
+  /**
+   * Generate xAPI object definition used in xAPI statements.
+   * @return {Object}
+   */
+  ImageHotspotQuestion.prototype.getxAPIDefinition = function () {
+    // Individual report not supported
+    if (this.isRoot()) {
+      return;
+    }
+    var definition = {};
+    definition.description = {
+      'en-US': this.getTitle()
+    };
+    definition.type = 'http://adlnet.gov/expapi/activities/cmi.interaction';
+    definition.interactionType = 'other';
+    return definition;
   };
 
   /**

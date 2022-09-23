@@ -69,12 +69,12 @@
       ]
     },
     {
-      "label": "Representação textual da barra de resultados para utilizadores de leitor de ecrã",
+      "label": "Representação textual da barra de pontuação para aqueles que usam leitores de ecrã",
       "default": "Conseguiu :num pontos de um total de :total"
     },
     {
       "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "default": "Repetir a atividade. Apagar todas as respostas e reiniciar a atividade."
     }
   ]
 }

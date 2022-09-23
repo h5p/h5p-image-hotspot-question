@@ -1,14 +1,14 @@
 {
   "semantics": [
     {
-      "label": "Editor de questões de pontos de acessos em imagens",
+      "label": "Editor de Questões de Pontos de Acessos em Imagens",
       "fields": [
         {
           "label": "Imagem de fundo",
           "fields": [
             {
               "label": "Imagem de fundo",
-              "description": "Seleciona uma imagem para ser usada como plano de fundo para a questão de pontos de acesso em imagem."
+              "description": "Selecione uma imagem para usar como fundo para a pergunta do ponto de acesso de imagem."
             }
           ]
         },
@@ -18,11 +18,11 @@
           "fields": [
             {
               "label": "Descrição da tarefa",
-              "description": "isntruções para o usuário."
+              "description": "Instruções para o usuário."
             },
             {
               "label": "Ponto de acesso",
-              "entity": "Hotspot",
+              "entity": "Ponto de acesso",
               "field": {
                 "label": "Ponto de acesso",
                 "fields": [
@@ -39,7 +39,7 @@
                     ]
                   },
                   {
-                    "label": "Configurações calculadas"
+                    "label": "Configurações computadas"
                   }
                 ]
               }
@@ -55,8 +55,8 @@
               "label": "Localização",
               "fields": [
                 {
-                  "label": "Texto do botão Tentar novamente",
-                  "default": "Tentar novamente"
+                  "label": "Texto do botão \"Tentar Novamente\"",
+                  "default": "Tentar Novamente"
                 },
                 {
                   "label": "Texto do botão Fechar",
@@ -70,11 +70,11 @@
     },
     {
       "label": "Representação textual da barra de pontuação para aqueles que usam leitores de telas",
-      "default": "Você marcou :num out de :total pontos"
+      "default": "Você conseguiu :num de :total pontos possíveis"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Descrição da tecnologia de assistência para o botão \"Tentar Novamente\"",
+      "default": "Tente realizar a tarefa novamente. Reinicialize todas as respostas e recomece."
     }
   ]
 }
