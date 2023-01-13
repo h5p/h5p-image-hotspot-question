@@ -8,7 +8,7 @@
           "fields": [
             {
               "label": "Image d'arrière-plan",
-              "description": "Choisissez l'image qui servira d'arrière-plan à la question."
+              "description": "Sélectionner une image à utiliser comme fond pour la question de la zone réactive de l'image."
             }
           ]
         },

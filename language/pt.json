@@ -8,7 +8,7 @@
           "fields": [
             {
               "label": "Imagem de fundo",
-              "description": "Escolha uma imagem para utilizar como fundo da sua questão de hotspot de imagem."
+              "description": "Selecione uma imagem para usar como fundo para a pergunta do ponto de acesso de imagem."
             }
           ]
         },
