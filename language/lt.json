@@ -12,7 +12,7 @@
           ]
         },
         {
-          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "description": "Nuvilkite norimą figūrą iš įrankių juostos, kad sukurtumėte naują prieigos tašką. Dukart spustelėkite, jei norite redaguoti esamą prieigos tašką. Vilkite prieigos tašką, kad jį perkeltumėte. Norėdami pakeisti dydį, traukite apatiniame dešiniajame kampe esančią dydžio keitimo rankenėlę.",
           "fields": [
             {
               "description": "Instrukcijos naudotojui.",
@@ -66,7 +66,7 @@
           "label": "Aktyviosios sritys"
         }
       ],
-      "label": "Image Hotspot Question Editor"
+      "label": "Vaizdo prieigos taško klausimų redaktorius"
     },
     {
       "default": "You got :num out of :total points",

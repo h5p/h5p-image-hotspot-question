@@ -52,7 +52,7 @@
               "label": "Mostrar retroalimentación en una ventana emergente"
             },
             {
-              "label": "Localización",
+              "label": "Adaptación local",
               "fields": [
                 {
                   "label": "Texto del botón Reintentar",
