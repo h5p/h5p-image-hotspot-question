@@ -1,24 +1,24 @@
 {
   "semantics": [
     {
-      "label": "Image Hotspot Question Editor",
+      "label": "Fråge-redigerare för hotspot-bild",
       "fields": [
         {
-          "label": "Background image",
+          "label": "Bakgrundsbild",
           "fields": [
             {
-              "label": "Background image",
-              "description": "Select an image to use as background for the image hotspot question."
+              "label": "Bakgrundsbild",
+              "description": "Välj en bild att använda som bakgrundsbild för hotspot-frågan."
             }
           ]
         },
         {
           "label": "Hotspots",
-          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "description": "Drag och släpp den önskade figuren från verktygsfältet för att skapa en ny hotspot. Dubbelklicka för att redigera en befintlig hotspot. Drag en hotspot för att flytta den. Dra i nedre högre hörnet på en hotspot för att ändra storlek.",
           "fields": [
             {
-              "label": "Task description",
-              "description": "Instructions to the user."
+              "label": "Beskrivning av uppgift",
+              "description": "Instruktioner till användaren."
             },
             {
               "label": "Hotspot",
@@ -27,11 +27,11 @@
                 "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "userSettings",
+                    "label": "Användarinställningar",
                     "fields": [
                       {
-                        "label": "Correct",
-                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                        "label": "Korrekt",
+                        "description": "Det kan finnas flera korrekta hotspots. Användaren får omedelbar feedback om det var korrekt eller ej efter första klicket."
                       },
                       {
                         "label": "Feedback"
@@ -39,28 +39,28 @@
                     ]
                   },
                   {
-                    "label": "computedSettings"
+                    "label": "Beräknade inställningar"
                   }
                 ]
               }
             },
             {
-              "label": "Feedback if the user selects an empty spot:",
-              "placeholder": "You didn't locate any hotspots, try again!"
+              "label": "Feedback om användaren väljer ett tomt målfält:",
+              "placeholder": "Du träffade inga hotspots, försök igen!"
             },
             {
-              "label": "Show feedback as a popup"
+              "label": "Visa feedback som popup"
             },
             {
-              "label": "Localization",
+              "label": "Lokalisering",
               "fields": [
                 {
-                  "label": "Retry button text",
-                  "default": "Retry"
+                  "label": "Text för knappe \"försök igen\"",
+                  "default": "Försök igen"
                 },
                 {
-                  "label": "Close button text",
-                  "default": "Close"
+                  "label": "Text för stäng-knapp",
+                  "default": "Stäng"
                 }
               ]
             }
@@ -69,12 +69,12 @@
       ]
     },
     {
-      "label": "Textual representation of the score bar for those using a readspeaker",
-      "default": "You got :num out of :total points"
+      "label": "Hur poängfältet beskrivs för användare med skärmläsare.",
+      "default": "Du fick :num av :total poäng"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Hur knappen \"Försök igen\" beskrivs för tillgänglighetshjälpmedel",
+      "default": "Försök igen med uppgiften. Nollställer alla svar och börjar om med uppgiften."
     }
   ]
 }
