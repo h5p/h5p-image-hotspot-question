@@ -438,6 +438,9 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     // Clear feedback
     this.removeFeedback();
+    
+    // Reset score
+    this.score = 0;
   };
 
   /**
