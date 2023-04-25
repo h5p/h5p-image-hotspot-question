@@ -1,24 +1,24 @@
 {
   "semantics": [
     {
-      "label": "Image Hotspot Question Editor",
+      "label": "Edytor pytań graficznych hotspot",
       "fields": [
         {
-          "label": "Background image",
+          "label": "Grafika w tle",
           "fields": [
             {
-              "label": "Background image",
-              "description": "Select an image to use as background for the image hotspot question."
+              "label": "Grafika w tle",
+              "description": "Wybierz grafikę do wykorzystania jako tło pytania."
             }
           ]
         },
         {
-          "label": "Hotspots",
-          "description": "Drag and drop the desired figure from the toolbar to create a new hotspot. Double-click to edit an existing hotspot. Drag the hotspot to move it. Pull the resize handler in the lower right corner to resize.",
+          "label": "Hotspoty",
+          "description": "Przeciągnij i upuść kształt z paska narzędzi, aby utworzyć nowy hotspot. Kliknij dwa razy, aby edytować istniejący hotspot. Przeciągnij hotspot, aby zmienić jego położenie. Pociągnij uchwyt zmiany rozmiaru, aby dostosować wielkość.",
           "fields": [
             {
-              "label": "Task description",
-              "description": "Instructions to the user."
+              "label": "Opis zadania",
+              "description": "Polecenie dla użytkownika."
             },
             {
               "label": "Hotspot",
@@ -27,40 +27,40 @@
                 "label": "Hotspot",
                 "fields": [
                   {
-                    "label": "userSettings",
+                    "label": "Ustawienia użytkownika",
                     "fields": [
                       {
-                        "label": "Correct",
-                        "description": "There can be multiple correct hotspots. However, the user gets correct/incorrect feedback immediately after first click."
+                        "label": "Odpowiedź prawidłowa",
+                        "description": "Istnieje wiele prawidłowych hotspotów. Użytkownik otrzymuje informację zwrotną od razu po pierwszym kliknięciu."
                       },
                       {
-                        "label": "Feedback"
+                        "label": "Informacja zwrotna"
                       }
                     ]
                   },
                   {
-                    "label": "computedSettings"
+                    "label": "Ustawienia obliczeń"
                   }
                 ]
               }
             },
             {
-              "label": "Feedback if the user selects an empty spot:",
-              "placeholder": "You didn't locate any hotspots, try again!"
+              "label": "Informacja zwrotna, jeśli użytkownik wybierze pusty:",
+              "placeholder": "Nie wybrałeś żadnego hotspota. Spróbuj jeszcze raz!"
             },
             {
-              "label": "Show feedback as a popup"
+              "label": "Pokaż informację zwrotną jako popup"
             },
             {
-              "label": "Localization",
+              "label": "Tłumaczenie",
               "fields": [
                 {
-                  "label": "Retry button text",
-                  "default": "Retry"
+                  "label": "Tekst przycisku \"Ponów\"",
+                  "default": "Ponów"
                 },
                 {
-                  "label": "Close button text",
-                  "default": "Close"
+                  "label": "Tekst przycisku \"Zamknij\"",
+                  "default": "Zamknij"
                 }
               ]
             }
@@ -69,12 +69,12 @@
       ]
     },
     {
-      "label": "Textual representation of the score bar for those using a readspeaker",
-      "default": "You got :num out of :total points"
+      "label": "Tekstowe przedstawienie punktacji dla osób korzystających z czytnika tekstu",
+      "default": "Dostajesz :num punktów z :total points"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Opis dla technologii wspomagających: przycisk \"Ponów\"",
+      "default": "Zacznij od nowa. Usuń wszystkie odpowiedzi i rozpocznij zadanie od początku."
     }
   ]
 }
