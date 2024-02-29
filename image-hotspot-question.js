@@ -448,6 +448,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    * @see contract at {@link https://h5p.org/documentation/developers/contracts#guides-header-5}
    */
   ImageHotspotQuestion.prototype.resetTask = function () {
+    this.wasReset = true;
+
     // Remove hotspot feedback
     this.hotspotFeedback.element?.remove();
     this.hotspotFeedback.hotspotChosen = false;
@@ -487,10 +489,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
    */
   ImageHotspotQuestion.prototype.getCurrentState = function () {
     if (!this.getAnswerGiven()) {
-      return this.stateWasStored ? {} : undefined;
+      return this.wasReset? {} : undefined;
     }
-
-    this.stateWasStored = true;
 
     return {
       hotspotIndex: this.lastHotspot,
