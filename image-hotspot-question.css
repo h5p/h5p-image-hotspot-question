@@ -1,7 +1,5 @@
-/* Transparent background color is a IE10 hack to get click event*/
 .h5p-image-hotspot-question .image-hotspot {
   position: absolute;
-  background-color: rgba(0,0,0,0);
 }
 
 .h5p-image-hotspot-question .image-hotspot.circle {
@@ -41,7 +39,7 @@
 .h5p-image-hotspot-question .image-loader:after {
   position: absolute;
   content: "";
-  background: url('h5p.svg') no-repeat center;
+  background: url("h5p.svg") no-repeat center;
   background-size: 50% 50%;
   width: 100%;
   height: 100%;
@@ -51,6 +49,7 @@
   -webkit-animation: spinning 3s infinite ease-in-out;
   animation: spinning 3s infinite ease-in-out;
 }
+
 @-webkit-keyframes spinning {
   0% {
     -webkit-transform: rotate(0deg);
