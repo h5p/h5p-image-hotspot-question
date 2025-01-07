@@ -56,11 +56,11 @@
               "fields": [
                 {
                   "label": "Retry button text",
-                  "default": "Retry"
+                  "default": "もう一度やってみる​"
                 },
                 {
                   "label": "Close button text",
-                  "default": "Close"
+                  "default": "閉じる"
                 }
               ]
             }
@@ -74,7 +74,7 @@
     },
     {
       "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "default": "回答を一旦リセットして、もう一度挑戦してみましょう。"
     }
   ]
 }
