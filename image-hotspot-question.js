@@ -34,7 +34,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     };
 
     // Inheritance
-    Question.call(this, 'image-hotspot-question');
+    Question.call(this, 'image-hotspot-question', true);
 
     /**
      * Keeps track of content id.
@@ -376,7 +376,10 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
         this.resetTask();
       },
       false,
-      { 'aria-label': this.params.a11yRetry }
+      { 'aria-label': this.params.a11yRetry },
+      {
+        classes: 'h5p-theme-secondary-cta h5p-theme-retry',
+      }
     );
   };
 
