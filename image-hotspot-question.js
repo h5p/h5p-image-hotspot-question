@@ -34,7 +34,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     };
 
     // Inheritance
-    Question.call(this, 'image-hotspot-question', true);
+    Question.call(this, 'image-hotspot-question', { theme: true });
 
     /**
      * Keeps track of content id.
