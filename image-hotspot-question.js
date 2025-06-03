@@ -378,7 +378,8 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
       false,
       { 'aria-label': this.params.a11yRetry },
       {
-        classes: 'h5p-theme-secondary-cta h5p-theme-retry',
+        styleType: 'secondary',
+        icon: 'retry'
       }
     );
   };
