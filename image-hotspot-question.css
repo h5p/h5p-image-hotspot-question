@@ -179,3 +179,19 @@
     opacity: 1;
   }
 }
+
+/* Position containers for scorebar and buttons side by side */
+.h5p-image-hotspot-question .h5p-question-content-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.h5p-image-hotspot-question .h5p-question-scorebar-wrapper {
+  flex: 1;
+}
+
+.h5p-image-hotspot-question .h5p-question-buttons-wrapper {
+  flex: 1;
+  text-align: right;
+}
