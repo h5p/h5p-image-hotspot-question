@@ -336,8 +336,31 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
         this.isPopopOpen = false;
       });
 
-      // Workaroung for H5P.Question when using popups
+      // Create separate containers for scorebar and buttons
+      const scorebar = questionFeedback.querySelector('.h5p-question-scorebar');
       const buttons = questionFeedback.querySelector('.h5p-question-buttons');
+
+      if (scorebar && buttons && !questionFeedback.querySelector('.h5p-question-content-wrapper')) {
+        const currentParent = scorebar.parentNode;
+
+        const contentWrapper = document.createElement('div');
+        contentWrapper.className = 'h5p-question-content-wrapper';
+
+        const scorebarWrapper = document.createElement('div');
+        scorebarWrapper.className = 'h5p-question-scorebar-wrapper';
+
+        const buttonsWrapper = document.createElement('div');
+        buttonsWrapper.className = 'h5p-question-buttons-wrapper';
+
+        scorebarWrapper.appendChild(scorebar);
+        buttonsWrapper.appendChild(buttons);
+
+        contentWrapper.appendChild(scorebarWrapper);
+        contentWrapper.appendChild(buttonsWrapper);
+
+        currentParent.appendChild(contentWrapper);
+      } 
+
       if (buttons) {
         buttons.style.display = 'inline-block';
       }
