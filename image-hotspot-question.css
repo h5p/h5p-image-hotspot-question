@@ -138,6 +138,8 @@
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .h5p-image-hotspot-question .h5p-question-popup .h5p-question-scorebar {
@@ -178,4 +180,15 @@
     -webkit-transform: scale(1);
     opacity: 1;
   }
+}
+
+/* Position containers for scorebar and buttons side by side */
+.h5p-image-hotspot-question .h5p-question-content-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.h5p-image-hotspot-question .h5p-question-scorebar-wrapper {
+  flex: 1;
 }
