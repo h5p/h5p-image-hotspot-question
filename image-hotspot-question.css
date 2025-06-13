@@ -2,6 +2,11 @@
   position: absolute;
 }
 
+.h5p-image-hotspot-question .h5p-question-buttons {
+  container-type: unset;
+  width: unset;
+}
+
 .h5p-image-hotspot-question .image-hotspot.circle {
   border-radius: 50%;
 }
@@ -27,6 +32,10 @@
 
 .h5p-image-hotspot-question .h5peditor .file img {
   max-width: 500px;
+}
+
+.h5p-image-hotspot-question > div {
+  color: var(--h5p-theme-text-third);
 }
 
 /* Image loader */
@@ -79,16 +88,21 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #e6ced1;
   box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.5);
-  color: #c33f62;
+  background: var(--h5p-theme-feedback-incorrect-secondary);
+  border: solid 2px var(--h5p-theme-feedback-incorrect-third);
+  color: var(--h5p-theme-feedback-incorrect-main);
   font-size: 16px;
   visibility: hidden;
 }
 
+.h5p-image-hotspot-question .h5p-question-feedback.h5p-question-popup .h5p-question-feedback-close {
+  margin: 0;
+}
+
 .h5p-image-hotspot-question .hotspot-feedback:before {
-  font-family: "H5PFontAwesome4";
-  content: "\f00d";
+  font-family: "h5p-theme";
+  content: "\e902";
   position: absolute;
   width: 100%;
   text-align: center;
@@ -97,22 +111,17 @@
 
 /* Correct feedback */
 .h5p-image-hotspot-question .hotspot-feedback.correct {
-  background: #d1e2ce;
-  color: #39692e;
+  background: var(--h5p-theme-feedback-correct-secondary);
+  border: solid 2px var(--h5p-theme-feedback-correct-third);
+  color: var(--h5p-theme-feedback-correct-main);
 }
 
 .h5p-image-hotspot-question .hotspot-feedback.correct:before {
-  content: "\f00c";
-}
-
-/* Retry button icon*/
-.h5p-image-hotspot-question .h5p-question-retry-button:before {
-  font-family: "H5PFontAwesome4";
-  content: "\f01e";
+  content: "\e903";
 }
 
 /* Hotspot feedback animation*/
-.h5p-image-hotspot-question .hotspot-feedback.fade-in{
+.h5p-image-hotspot-question .hotspot-feedback.fade-in {
   animation-name: fade-in;
   -webkit-animation-name: fade-in;
 
@@ -129,6 +138,8 @@
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .h5p-image-hotspot-question .h5p-question-popup .h5p-question-scorebar {
@@ -169,4 +180,15 @@
     -webkit-transform: scale(1);
     opacity: 1;
   }
+}
+
+/* Position containers for scorebar and buttons side by side */
+.h5p-image-hotspot-question .h5p-question-content-wrapper {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.h5p-image-hotspot-question .h5p-question-scorebar-wrapper {
+  flex: 1;
 }
