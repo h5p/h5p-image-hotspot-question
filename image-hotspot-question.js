@@ -314,7 +314,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     const feedbackText = params.hotspotParams?.userSettings.feedbackText ||
       this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback ||
-      '&nbsp;';
+      '';
 
     // Send these settings into setFeedback to turn feedback into a popup.
     const popupSettings = {
@@ -365,7 +365,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
         contentWrapper.appendChild(buttonsWrapper);
 
         currentParent.appendChild(contentWrapper);
-      } 
+      }
 
       if (buttons) {
         buttons.style.display = 'inline-block';

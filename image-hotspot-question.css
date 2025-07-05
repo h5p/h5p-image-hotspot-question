@@ -149,6 +149,8 @@
 
 .h5p-image-hotspot-question .h5p-question-popup .h5p-question-scorebar {
   margin: 0;
+  max-height: unset;
+  width: 100%;
 }
 
 @keyframes fade-in {
