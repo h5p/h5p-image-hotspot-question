@@ -94,6 +94,12 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     };
 
     this.callOnceAttached(() => {
+      if (this.params.imageHotspotQuestion.hotspotSettings.showFeedbackAsPopup) {
+        const mainContainer = this.dom.parentNode.closest('.h5p-image-hotspot-question');
+        if (mainContainer) {
+          mainContainer.classList.add('show-feedback-as-popup');
+        }
+      }
       if (typeof this.lastHotspot === 'number' && this.lastPosition) {
         const hotspotParams = this.lastHotspot >= 0 ?
           this.hotspotSettings.hotspot[this.lastHotspot] :
