@@ -94,6 +94,12 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
     };
 
     this.callOnceAttached(() => {
+      if (this.params.imageHotspotQuestion.hotspotSettings.showFeedbackAsPopup) {
+        const mainContainer = this.dom.parentNode.closest('.h5p-image-hotspot-question');
+        if (mainContainer) {
+          mainContainer.classList.add('show-feedback-as-popup');
+        }
+      }
       if (typeof this.lastHotspot === 'number' && this.lastPosition) {
         const hotspotParams = this.lastHotspot >= 0 ?
           this.hotspotSettings.hotspot[this.lastHotspot] :
@@ -308,7 +314,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
 
     const feedbackText = params.hotspotParams?.userSettings.feedbackText ||
       this.params.imageHotspotQuestion.hotspotSettings.noneSelectedFeedback ||
-      '&nbsp;';
+      '';
 
     // Send these settings into setFeedback to turn feedback into a popup.
     const popupSettings = {
@@ -359,7 +365,7 @@ H5P.ImageHotspotQuestion = (function ($, Question) {
         contentWrapper.appendChild(buttonsWrapper);
 
         currentParent.appendChild(contentWrapper);
-      } 
+      }
 
       if (buttons) {
         buttons.style.display = 'inline-block';

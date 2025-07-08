@@ -142,8 +142,15 @@
   padding-right: 0;
 }
 
+.h5p-image-hotspot-question.show-feedback-as-popup .h5p-theme-pattern-container,
+.h5p-image-hotspot-question.show-feedback-as-popup .h5p-question-evaluation-container {
+  display: none;
+}
+
 .h5p-image-hotspot-question .h5p-question-popup .h5p-question-scorebar {
   margin: 0;
+  max-height: unset;
+  width: 100%;
 }
 
 @keyframes fade-in {
