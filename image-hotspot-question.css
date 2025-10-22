@@ -153,6 +153,10 @@
   width: 100%;
 }
 
+.h5p-image-hotspot-question .h5p-question-popup .h5p-question-scorebar .h5p-joubelui-score-bar {
+  width: 100%;
+}
+
 @keyframes fade-in {
   0% {
     transform: scale(0);
@@ -191,11 +195,13 @@
 
 /* Position containers for scorebar and buttons side by side */
 .h5p-image-hotspot-question .h5p-question-content-wrapper {
-  display: flex;
+  display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
   width: 100%;
 }
 
-.h5p-image-hotspot-question .h5p-question-scorebar-wrapper {
-  flex: 1;
+.h5p-image-hotspot-question .h5p-question-buttons-wrapper {
+  justify-self: end;
 }
