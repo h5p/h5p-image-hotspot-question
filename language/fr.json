@@ -73,8 +73,8 @@
       "default": "Vous avez :num points sur un total de :total"
     },
     {
-      "label": "Assistive technology description for \"Retry\" button",
-      "default": "Retry the task. Reset all responses and start the task over again."
+      "label": "Description pour les technologies d'assistance du bouton \"Recommencer\"",
+      "default": "Recommencer la tâche. Réinitialiser toutes les réponses et recommencer la tâche."
     }
   ]
 }
